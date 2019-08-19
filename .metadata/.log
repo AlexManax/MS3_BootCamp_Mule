@@ -310,3 +310,240 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/alexp
 
 !ENTRY org.eclipse.egit.core 1 0 2019-08-19 08:20:22.949
 !MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2019-08-19 09:20:35.717
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2019-08-19 09:20:35.717
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.717
+!MESSAGE Software being installed: m2e - Maven Integration for Eclipse (includes Incubating components) 1.12.0.20190529-1916 (org.eclipse.m2e.feature.feature.group 1.12.0.20190529-1916)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.717
+!MESSAGE Missing requirement: org.eclipse.m2e.binaryproject 1.12.0.20190529-1916 requires 'bundle org.eclipse.jdt.launching 3.10.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-08-19 09:20:35.717
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.717
+!MESSAGE From: org.eclipse.m2e.binaryproject.ui 1.12.0.20190529-1916
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.717
+!MESSAGE To: bundle org.eclipse.m2e.binaryproject [1.12.0,1.13.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-08-19 09:20:35.717
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.717
+!MESSAGE From: m2e - Maven Integration for Eclipse (includes Incubating components) 1.12.0.20190529-1916 (org.eclipse.m2e.feature.feature.group 1.12.0.20190529-1916)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.717
+!MESSAGE To: org.eclipse.m2e.binaryproject.ui [1.12.0.20190529-1916]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2019-08-19 09:20:35.770
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2019-08-19 09:20:35.770
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.770
+!MESSAGE Software being installed: m2e - Maven Integration for Eclipse (includes Incubating components) 1.12.0.20190529-1916 (org.eclipse.m2e.feature.feature.group 1.12.0.20190529-1916)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.770
+!MESSAGE Missing requirement: org.eclipse.m2e.binaryproject 1.12.0.20190529-1916 requires 'bundle org.eclipse.jdt.launching 3.10.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-08-19 09:20:35.770
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.770
+!MESSAGE From: org.eclipse.m2e.binaryproject.ui 1.12.0.20190529-1916
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.770
+!MESSAGE To: bundle org.eclipse.m2e.binaryproject [1.12.0,1.13.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-08-19 09:20:35.770
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.770
+!MESSAGE From: m2e - Maven Integration for Eclipse (includes Incubating components) 1.12.0.20190529-1916 (org.eclipse.m2e.feature.feature.group 1.12.0.20190529-1916)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.770
+!MESSAGE To: org.eclipse.m2e.binaryproject.ui [1.12.0.20190529-1916]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2019-08-19 09:20:35.829
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2019-08-19 09:20:35.830
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.830
+!MESSAGE Software being installed: m2e - Maven Integration for Eclipse (includes Incubating components) 1.12.0.20190529-1916 (org.eclipse.m2e.feature.feature.group 1.12.0.20190529-1916)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.830
+!MESSAGE Missing requirement: org.eclipse.m2e.binaryproject 1.12.0.20190529-1916 requires 'bundle org.eclipse.jdt.launching 3.10.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-08-19 09:20:35.830
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.830
+!MESSAGE From: org.eclipse.m2e.binaryproject.ui 1.12.0.20190529-1916
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.830
+!MESSAGE To: bundle org.eclipse.m2e.binaryproject [1.12.0,1.13.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-08-19 09:20:35.830
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.830
+!MESSAGE From: m2e - Maven Integration for Eclipse (includes Incubating components) 1.12.0.20190529-1916 (org.eclipse.m2e.feature.feature.group 1.12.0.20190529-1916)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.830
+!MESSAGE To: org.eclipse.m2e.binaryproject.ui [1.12.0.20190529-1916]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2019-08-19 09:20:35.831
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2019-08-19 09:20:35.831
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.831
+!MESSAGE Software being installed: m2e - Maven Integration for Eclipse (includes Incubating components) 1.12.0.20190529-1916 (org.eclipse.m2e.feature.feature.group 1.12.0.20190529-1916)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.831
+!MESSAGE Missing requirement: org.eclipse.m2e.binaryproject 1.12.0.20190529-1916 requires 'bundle org.eclipse.jdt.launching 3.10.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-08-19 09:20:35.831
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.831
+!MESSAGE From: org.eclipse.m2e.binaryproject.ui 1.12.0.20190529-1916
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.831
+!MESSAGE To: bundle org.eclipse.m2e.binaryproject [1.12.0,1.13.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2019-08-19 09:20:35.831
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.831
+!MESSAGE From: m2e - Maven Integration for Eclipse (includes Incubating components) 1.12.0.20190529-1916 (org.eclipse.m2e.feature.feature.group 1.12.0.20190529-1916)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2019-08-19 09:20:35.831
+!MESSAGE To: org.eclipse.m2e.binaryproject.ui [1.12.0.20190529-1916]
+
+!ENTRY com.cloveretl.gui.jmx 4 0 2019-08-19 09:24:26.001
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in com.cloveretl.gui.jmx.Activator.stop() of bundle com.cloveretl.gui.jmx.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:855)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1675)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1594)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ExceptionInInitializerError
+	at com.cloveretl.gui.jmx.Activator.stop(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	... 13 more
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1090)
+	at org.eclipse.swt.widgets.Display.createDisplay(Display.java:840)
+	at org.eclipse.swt.widgets.Display.create(Display.java:823)
+	at org.eclipse.swt.graphics.Device.<init>(Device.java:129)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:722)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:713)
+	at org.eclipse.swt.widgets.Display.getDefault(Display.java:1420)
+	at org.eclipse.swt.widgets.Display.lambda$0(Display.java:361)
+	at org.eclipse.swt.graphics.Device.getDevice(Device.java:71)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:49)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:805)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:271)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:240)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:218)
+	at com.cloveretl.gui.jmx.graphdecorator.JmxGraphDecorator.<clinit>(Unknown Source)
+	... 18 more
+Root exception:
+java.lang.ExceptionInInitializerError
+	at com.cloveretl.gui.jmx.Activator.stop(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:828)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:947)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1675)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1594)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1090)
+	at org.eclipse.swt.widgets.Display.createDisplay(Display.java:840)
+	at org.eclipse.swt.widgets.Display.create(Display.java:823)
+	at org.eclipse.swt.graphics.Device.<init>(Device.java:129)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:722)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:713)
+	at org.eclipse.swt.widgets.Display.getDefault(Display.java:1420)
+	at org.eclipse.swt.widgets.Display.lambda$0(Display.java:361)
+	at org.eclipse.swt.graphics.Device.getDevice(Device.java:71)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:49)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:805)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:271)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:240)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:218)
+	at com.cloveretl.gui.jmx.graphdecorator.JmxGraphDecorator.<clinit>(Unknown Source)
+	... 18 more
+!SESSION 2019-08-19 09:24:27.382 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/alexp/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data file:/Users/alexp/Desktop/My_projects/MS3/MuleSoft/ -keyring /Users/alexp/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-08-19 09:24:31.651
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2019-08-19 09:24:31.688
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.core.jobs 4 2 2019-08-19 09:24:36.452
+!MESSAGE An internal error occurred during: "Updating indexes".
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/core/runtime/internal/adaptor/BasicLocation
+	at org.eclipse.m2e.core.internal.index.nexus.EquinoxLocker.lock(EquinoxLocker.java:28)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1121)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateIndex(NexusIndexManager.java:1083)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:660)
+	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.core.runtime.internal.adaptor.BasicLocation cannot be found by org.eclipse.m2e.core_1.4.1.20140328-1905
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 6 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2019-08-19 09:24:36.453
+!MESSAGE An internal error occurred during: "Updating indexes".
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/core/runtime/internal/adaptor/BasicLocation
+	at org.eclipse.m2e.core.internal.index.nexus.EquinoxLocker.lock(EquinoxLocker.java:28)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1121)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateIndex(NexusIndexManager.java:1083)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:660)
+	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.core.runtime.internal.adaptor.BasicLocation cannot be found by org.eclipse.m2e.core_1.4.1.20140328-1905
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 6 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2019-08-19 09:24:36.453
+!MESSAGE An internal error occurred during: "Updating indexes".
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/core/runtime/internal/adaptor/BasicLocation
+	at org.eclipse.m2e.core.internal.index.nexus.EquinoxLocker.lock(EquinoxLocker.java:28)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1121)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateIndex(NexusIndexManager.java:1083)
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:660)
+	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.core.runtime.internal.adaptor.BasicLocation cannot be found by org.eclipse.m2e.core_1.4.1.20140328-1905
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 6 more
