@@ -8606,3 +8606,497 @@ java.sql.SQLSyntaxErrorException: Unknown column 'id' in 'where clause'
 **********************************************************************
 2019-08-16 11:33:39,132 [[accountsapi].accounts-api-httpListenerConfig.worker.01] INFO  com.mulesoft.weave.mule.utils.MuleWeaveFactory$ - MimeType was not resolved '*/*' delegating to Java.
 2019-08-16 11:33:43,758 [[accountsapi].accounts-api-httpListenerConfig.worker.01] INFO  com.mulesoft.weave.mule.utils.MuleWeaveFactory$ - MimeType was not resolved '*/*' delegating to Java.
+2019-08-19 11:32:42,676 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'accountsapi'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-19 11:32:42,757 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-08-19 11:32:42,837 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-08-19 11:32:42,912 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-08-19 11:32:42,912 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-08-19 11:32:43,095 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@c9413d8: startup date [Mon Aug 19 11:32:43 EDT 2019]; root of context hierarchy
+2019-08-19 11:32:43,895 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-08-19 11:32:44,560 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2019-08-19 11:32:44,846 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-tx-log/tx1.log and /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-tx-log/tx2.log
+2019-08-19 11:32:44,854 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-xa-tx-log/tx1.log and /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-xa-tx-log/tx2.log
+2019-08-19 11:32:44,900 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2019-08-19 11:32:44,902 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: accounts-api-main
+2019-08-19 11:32:44,902 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2019-08-19 11:32:44,905 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2019-08-19 11:32:44,905 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2019-08-19 11:32:44,905 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2019-08-19 11:32:44,906 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2019-08-19 11:32:44,921 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: accounts-api-main.stage1
+2019-08-19 11:32:44,927 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: accounts-api-console
+2019-08-19 11:32:44,928 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2da81754
+2019-08-19 11:32:44,930 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: accounts-api-console.stage1
+2019-08-19 11:32:44,931 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/accounts:accounts-api-config
+2019-08-19 11:32:44,932 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4351ed61
+2019-08-19 11:32:44,934 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/accounts:accounts-api-config.stage1
+2019-08-19 11:32:44,934 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/accounts:application/json:accounts-api-config
+2019-08-19 11:32:44,934 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5ad6cc21
+2019-08-19 11:32:44,935 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/accounts:application/json:accounts-api-config.stage1
+2019-08-19 11:32:44,936 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:32:44,936 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3ece79fe
+2019-08-19 11:32:44,937 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:32:44,938 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: delete:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:32:44,938 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@59a2388e
+2019-08-19 11:32:44,939 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: delete:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:32:44,940 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: patch:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:32:44,940 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4d705112
+2019-08-19 11:32:44,941 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: patch:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:32:44,941 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/accounts/{id}:accounts-api-config
+2019-08-19 11:32:44,941 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@23468512
+2019-08-19 11:32:44,943 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 11:32:45,333 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2019-08-19 11:32:45,480 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/accountsapi/accounts-api.xml'}]"
+2019-08-19 11:32:45,481 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/accountsapi/accounts-api.xml'}]"
+2019-08-19 11:32:45,484 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2019-08-19 11:32:45,484 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'accountsapi'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-19 11:32:45,493 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2019-08-19 11:32:45,493 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2019-08-19 11:32:45,537 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2019-08-19 11:32:45,540 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2019-08-19 11:32:45,541 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: accounts-api-main
+2019-08-19 11:32:45,541 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: accounts-api-main.stage1
+2019-08-19 11:32:45,547 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2019-08-19 11:32:45,547 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: accounts-api-console
+2019-08-19 11:32:45,547 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: accounts-api-console.stage1
+2019-08-19 11:32:45,550 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/accounts:accounts-api-config
+2019-08-19 11:32:45,550 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/accounts:accounts-api-config.stage1
+2019-08-19 11:32:45,552 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/accounts:application/json:accounts-api-config
+2019-08-19 11:32:45,552 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/accounts:application/json:accounts-api-config.stage1
+2019-08-19 11:32:45,554 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:32:45,554 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:32:45,555 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: delete:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:32:45,555 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: delete:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:32:45,557 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: patch:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:32:45,557 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: patch:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:32:45,558 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/accounts/{id}:accounts-api-config
+2019-08-19 11:32:45,558 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 11:32:45,584 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2019-08-19 11:32:45,626 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: accountsapi                                           *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2019-08-19 11:42:55,238 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'accountsapi'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-19 11:42:55,310 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-08-19 11:42:55,376 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-08-19 11:42:55,439 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-08-19 11:42:55,439 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-08-19 11:42:55,613 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@37eeec90: startup date [Mon Aug 19 11:42:55 EDT 2019]; root of context hierarchy
+2019-08-19 11:42:56,521 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-08-19 11:42:57,219 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2019-08-19 11:42:57,495 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-tx-log/tx1.log and /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-tx-log/tx2.log
+2019-08-19 11:42:57,504 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-xa-tx-log/tx1.log and /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-xa-tx-log/tx2.log
+2019-08-19 11:42:57,557 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2019-08-19 11:42:57,559 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: accounts-api-main
+2019-08-19 11:42:57,559 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2019-08-19 11:42:57,562 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2019-08-19 11:42:57,562 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2019-08-19 11:42:57,562 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2019-08-19 11:42:57,562 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2019-08-19 11:42:57,577 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: accounts-api-main.stage1
+2019-08-19 11:42:57,584 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: accounts-api-console
+2019-08-19 11:42:57,584 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@261bd7b
+2019-08-19 11:42:57,586 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: accounts-api-console.stage1
+2019-08-19 11:42:57,587 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/accounts:accounts-api-config
+2019-08-19 11:42:57,587 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5042e3d0
+2019-08-19 11:42:57,589 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/accounts:accounts-api-config.stage1
+2019-08-19 11:42:57,590 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/accounts:application/json:accounts-api-config
+2019-08-19 11:42:57,590 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@38d80d65
+2019-08-19 11:42:57,591 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/accounts:application/json:accounts-api-config.stage1
+2019-08-19 11:42:57,591 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:42:57,591 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@262a1fad
+2019-08-19 11:42:57,593 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:42:57,593 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: delete:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:42:57,593 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2db6d68d
+2019-08-19 11:42:57,595 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: delete:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:42:57,595 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: patch:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:42:57,595 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@626d2016
+2019-08-19 11:42:57,597 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: patch:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:42:57,597 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/accounts/{id}:accounts-api-config
+2019-08-19 11:42:57,597 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2b53840a
+2019-08-19 11:42:57,598 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 11:42:57,599 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: delete:/accounts/{id}:accounts-api-config
+2019-08-19 11:42:57,599 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@52d3fafd
+2019-08-19 11:42:57,600 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: delete:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 11:42:57,980 [main] WARN  org.mule.module.apikit.Configuration - Flow named "delete:/accounts/{id}:application/json" does not match any RAML descriptor resource
+2019-08-19 11:42:57,987 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2019-08-19 11:42:58,130 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/accountsapi/accounts-api.xml'}]"
+2019-08-19 11:42:58,130 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/accountsapi/accounts-api.xml'}]"
+2019-08-19 11:42:58,134 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2019-08-19 11:42:58,134 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'accountsapi'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-19 11:42:58,143 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2019-08-19 11:42:58,143 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2019-08-19 11:42:58,183 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2019-08-19 11:42:58,186 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2019-08-19 11:42:58,188 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: accounts-api-main
+2019-08-19 11:42:58,188 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: accounts-api-main.stage1
+2019-08-19 11:42:58,194 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2019-08-19 11:42:58,195 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: accounts-api-console
+2019-08-19 11:42:58,195 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: accounts-api-console.stage1
+2019-08-19 11:42:58,197 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/accounts:accounts-api-config
+2019-08-19 11:42:58,197 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/accounts:accounts-api-config.stage1
+2019-08-19 11:42:58,198 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/accounts:application/json:accounts-api-config
+2019-08-19 11:42:58,198 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/accounts:application/json:accounts-api-config.stage1
+2019-08-19 11:42:58,200 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:42:58,200 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:42:58,202 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: delete:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:42:58,202 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: delete:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:42:58,204 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: patch:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:42:58,204 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: patch:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:42:58,205 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/accounts/{id}:accounts-api-config
+2019-08-19 11:42:58,205 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 11:42:58,207 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: delete:/accounts/{id}:accounts-api-config
+2019-08-19 11:42:58,208 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: delete:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 11:42:58,241 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2019-08-19 11:42:58,303 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: accountsapi                                           *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2019-08-19 11:47:16,931 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'accountsapi'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-19 11:47:17,017 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-08-19 11:47:17,084 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-08-19 11:47:17,151 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-08-19 11:47:17,151 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-08-19 11:47:17,329 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@37eeec90: startup date [Mon Aug 19 11:47:17 EDT 2019]; root of context hierarchy
+2019-08-19 11:47:18,136 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-08-19 11:47:18,837 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2019-08-19 11:47:19,107 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-tx-log/tx1.log and /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-tx-log/tx2.log
+2019-08-19 11:47:19,115 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-xa-tx-log/tx1.log and /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/accountsapi/queue-xa-tx-log/tx2.log
+2019-08-19 11:47:19,172 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2019-08-19 11:47:19,174 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: accounts-api-main
+2019-08-19 11:47:19,175 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2019-08-19 11:47:19,177 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2019-08-19 11:47:19,177 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2019-08-19 11:47:19,177 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2019-08-19 11:47:19,177 [main] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2019-08-19 11:47:19,192 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: accounts-api-main.stage1
+2019-08-19 11:47:19,198 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: accounts-api-console
+2019-08-19 11:47:19,198 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@261bd7b
+2019-08-19 11:47:19,200 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: accounts-api-console.stage1
+2019-08-19 11:47:19,202 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/accounts:accounts-api-config
+2019-08-19 11:47:19,202 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5042e3d0
+2019-08-19 11:47:19,204 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/accounts:accounts-api-config.stage1
+2019-08-19 11:47:19,204 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/accounts:application/json:accounts-api-config
+2019-08-19 11:47:19,204 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@38d80d65
+2019-08-19 11:47:19,206 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/accounts:application/json:accounts-api-config.stage1
+2019-08-19 11:47:19,206 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:47:19,206 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@262a1fad
+2019-08-19 11:47:19,207 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:47:19,207 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: delete:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:47:19,208 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2db6d68d
+2019-08-19 11:47:19,209 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: delete:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:47:19,209 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: patch:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:47:19,209 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@626d2016
+2019-08-19 11:47:19,211 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: patch:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:47:19,211 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/accounts/{id}:accounts-api-config
+2019-08-19 11:47:19,211 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2b53840a
+2019-08-19 11:47:19,213 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 11:47:19,213 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: delete:/accounts/{id}:accounts-api-config
+2019-08-19 11:47:19,213 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@52d3fafd
+2019-08-19 11:47:19,215 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: delete:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 11:47:19,590 [main] WARN  org.mule.module.apikit.Configuration - Flow named "delete:/accounts/{id}:application/json" does not match any RAML descriptor resource
+2019-08-19 11:47:19,597 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2019-08-19 11:47:19,750 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/accountsapi/accounts-api.xml'}]"
+2019-08-19 11:47:19,750 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/accountsapi/accounts-api.xml'}]"
+2019-08-19 11:47:19,753 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2019-08-19 11:47:19,753 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'accountsapi'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-19 11:47:19,760 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2019-08-19 11:47:19,760 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2019-08-19 11:47:19,800 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2019-08-19 11:47:19,803 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2019-08-19 11:47:19,804 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: accounts-api-main
+2019-08-19 11:47:19,804 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: accounts-api-main.stage1
+2019-08-19 11:47:19,810 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2019-08-19 11:47:19,810 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: accounts-api-console
+2019-08-19 11:47:19,810 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: accounts-api-console.stage1
+2019-08-19 11:47:19,812 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/accounts:accounts-api-config
+2019-08-19 11:47:19,812 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/accounts:accounts-api-config.stage1
+2019-08-19 11:47:19,814 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/accounts:application/json:accounts-api-config
+2019-08-19 11:47:19,814 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/accounts:application/json:accounts-api-config.stage1
+2019-08-19 11:47:19,816 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:47:19,816 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:47:19,818 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: delete:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:47:19,818 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: delete:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:47:19,820 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: patch:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 11:47:19,820 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: patch:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 11:47:19,821 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/accounts/{id}:accounts-api-config
+2019-08-19 11:47:19,821 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 11:47:19,822 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: delete:/accounts/{id}:accounts-api-config
+2019-08-19 11:47:19,822 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: delete:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 11:47:19,848 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2019-08-19 11:47:19,899 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: accountsapi                                           *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2019-08-19 12:50:13,764 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'accountsapi'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-19 12:50:13,767 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: accounts-api-main
+2019-08-19 12:50:13,768 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: accounts-api-main.stage1
+2019-08-19 12:50:13,874 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: accounts-api-console
+2019-08-19 12:50:13,874 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: accounts-api-console.stage1
+2019-08-19 12:50:14,076 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/accounts:accounts-api-config
+2019-08-19 12:50:14,076 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/accounts:accounts-api-config.stage1
+2019-08-19 12:50:14,084 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: post:/accounts:application/json:accounts-api-config
+2019-08-19 12:50:14,084 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: post:/accounts:application/json:accounts-api-config.stage1
+2019-08-19 12:50:14,086 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: put:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 12:50:14,086 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: put:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 12:50:14,096 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: delete:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 12:50:14,096 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: delete:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 12:50:14,276 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: patch:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 12:50:14,276 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: patch:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 12:50:14,287 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/accounts/{id}:accounts-api-config
+2019-08-19 12:50:14,287 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 12:50:14,299 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: delete:/accounts/{id}:accounts-api-config
+2019-08-19 12:50:14,299 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: delete:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 12:50:14,488 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2019-08-19 12:50:14,492 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081
+2019-08-19 12:50:14,493 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2019-08-19 12:50:14,493 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2019-08-19 12:50:14,497 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'accountsapi'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-19 12:50:14,498 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2019-08-19 12:50:14,499 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: accounts-api-main
+2019-08-19 12:50:14,499 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: accounts-api-main.stage1
+2019-08-19 12:50:14,502 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: accounts-api-console
+2019-08-19 12:50:14,502 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: accounts-api-console.stage1
+2019-08-19 12:50:14,502 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/accounts:accounts-api-config
+2019-08-19 12:50:14,502 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/accounts:accounts-api-config.stage1
+2019-08-19 12:50:14,502 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: post:/accounts:application/json:accounts-api-config
+2019-08-19 12:50:14,502 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: post:/accounts:application/json:accounts-api-config.stage1
+2019-08-19 12:50:14,502 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: put:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 12:50:14,502 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: put:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 12:50:14,503 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: delete:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 12:50:14,503 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: delete:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 12:50:14,503 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: patch:/accounts/{id}:application/json:accounts-api-config
+2019-08-19 12:50:14,503 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: patch:/accounts/{id}:application/json:accounts-api-config.stage1
+2019-08-19 12:50:14,503 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/accounts/{id}:accounts-api-config
+2019-08-19 12:50:14,503 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 12:50:14,504 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: delete:/accounts/{id}:accounts-api-config
+2019-08-19 12:50:14,504 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: delete:/accounts/{id}:accounts-api-config.stage1
+2019-08-19 12:50:14,505 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2019-08-19 12:50:14,589 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@37eeec90: startup date [Mon Aug 19 11:47:17 EDT 2019]; root of context hierarchy
+2019-08-19 12:50:14,597 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "accountsapi" shut down normally on: 8/19/19 12:50 PM  *
+* Up for: 0 days, 1 hours, 2 mins, 54.842 sec                        *
+**********************************************************************
+2019-08-19 12:50:14,674 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'accountsapi'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-19 12:50:14,679 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-08-19 12:50:14,683 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-08-19 12:50:14,692 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-08-19 12:50:14,692 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-08-19 12:50:14,693 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@21795b3: startup date [Mon Aug 19 12:50:14 EDT 2019]; root of context hierarchy
+2019-08-19 12:50:14,860 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-08-19 12:50:14,907 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.config.spring.MuleArtifactContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'get:/accounts:accounts-api-config': Cannot create inner bean '(inner bean)#6e4c1c41' of type [org.mule.module.db.internal.processor.SelectMessageProcessor] while setting bean property 'messageProcessors' with key [0]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#6e4c1c41': Cannot create inner bean '(inner bean)#61e5768' of type [org.mule.module.db.internal.resolver.database.ConfiguredDbConfigResolver] while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#61e5768': Cannot resolve reference to bean 'MySQL_Configurationx' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'MySQL_Configurationx' is defined
+2019-08-19 12:50:14,918 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2019-08-19 12:50:14,920 [Mule.app.deployer.monitor.1.thread.1] ERROR org.mule.config.spring.SpringRegistry - Failed to shut down registry cleanly: org.mule.Registry.Spring
+org.mule.api.lifecycle.LifecycleException: Failed to lookup beans of type interface org.mule.api.construct.FlowConstruct from the Spring registry
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:164) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.RegistryLifecycleManager.fireLifecycle(RegistryLifecycleManager.java:134) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.registry.AbstractRegistry.dispose(AbstractRegistry.java:68) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.registry.AbstractRegistryBroker$2.onTransition(AbstractRegistryBroker.java:69) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.registry.AbstractRegistryBroker$2.onTransition(AbstractRegistryBroker.java:64) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.RegistryBrokerLifecycleManager.fireDisposePhase(RegistryBrokerLifecycleManager.java:82) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.registry.AbstractRegistryBroker.dispose(AbstractRegistryBroker.java:63) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.registry.MuleRegistryHelper.fireLifecycle(MuleRegistryHelper.java:137) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.MuleContextLifecycleManager$MuleContextLifecycleCallback.onTransition(MuleContextLifecycleManager.java:74) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.MuleContextLifecycleManager$MuleContextLifecycleCallback.onTransition(MuleContextLifecycleManager.java:70) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.MuleContextLifecycleManager.fireLifecycle(MuleContextLifecycleManager.java:62) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.DefaultMuleContext.dispose(DefaultMuleContext.java:452) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.context.DefaultMuleContextFactory.doCreateMuleContext(DefaultMuleContextFactory.java:230) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.context.DefaultMuleContextFactory.createMuleContext(DefaultMuleContextFactory.java:81) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.application.DefaultMuleApplication.init(DefaultMuleApplication.java:210) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$2.execute(ArtifactWrapper.java:64) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:137) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.init(ArtifactWrapper.java:59) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:72) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DefaultArchiveDeployer.redeploy(DefaultArchiveDeployer.java:493) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DefaultArchiveDeployer.redeploy(DefaultArchiveDeployer.java:429) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.redeployModifiedArtifacts(DeploymentDirectoryWatcher.java:567) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.redeployModifiedApplications(DeploymentDirectoryWatcher.java:544) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.run(DeploymentDirectoryWatcher.java:356) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_221]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[?:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[?:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+Caused by: org.mule.api.MuleRuntimeException: Failed to lookup beans of type interface org.mule.api.construct.FlowConstruct from the Spring registry
+	at org.mule.config.spring.SpringRegistry.internalLookupByTypeWithoutAncestors(SpringRegistry.java:354) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.config.spring.SpringRegistry.lookupEntriesForLifecycle(SpringRegistry.java:368) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.config.spring.SpringRegistry.lookupObjectsForLifecycle(SpringRegistry.java:241) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.RegistryLifecycleCallback.lookupObjectsForLifecycle(RegistryLifecycleCallback.java:155) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.RegistryLifecycleCallback.onTransition(RegistryLifecycleCallback.java:77) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.2.jar:3.9.2]
+	... 32 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accounts-api-main': Cannot resolve reference to bean '_muleContext' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named '_muleContext' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolvePreparedArguments(ConstructorResolver.java:786) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:123) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1137) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1028) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:515) ~[mule-module-spring-config-3.9.2.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1067) ~[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.mule.config.spring.SpringRegistry.internalLookupByTypeWithoutAncestors(SpringRegistry.java:348) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.config.spring.SpringRegistry.lookupEntriesForLifecycle(SpringRegistry.java:368) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.config.spring.SpringRegistry.lookupObjectsForLifecycle(SpringRegistry.java:241) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.RegistryLifecycleCallback.lookupObjectsForLifecycle(RegistryLifecycleCallback.java:155) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.RegistryLifecycleCallback.onTransition(RegistryLifecycleCallback.java:77) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.2.jar:3.9.2]
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named '_muleContext' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:683) ~[mule-module-spring-config-3.9.2.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolvePreparedArguments(ConstructorResolver.java:786) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:123) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1137) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1028) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:515) ~[mule-module-spring-config-3.9.2.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1067) ~[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.mule.config.spring.SpringRegistry.internalLookupByTypeWithoutAncestors(SpringRegistry.java:348) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.config.spring.SpringRegistry.lookupEntriesForLifecycle(SpringRegistry.java:368) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.config.spring.SpringRegistry.lookupObjectsForLifecycle(SpringRegistry.java:241) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.RegistryLifecycleCallback.lookupObjectsForLifecycle(RegistryLifecycleCallback.java:155) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.RegistryLifecycleCallback.onTransition(RegistryLifecycleCallback.java:77) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.2.jar:3.9.2]
+	... 32 more
+2019-08-19 12:50:14,922 [Mule.app.deployer.monitor.1.thread.1] ERROR org.mule.module.launcher.application.DefaultMuleApplication - null
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'MySQL_Configurationx' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:683) ~[mule-module-spring-config-3.9.2.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:634) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1137) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1040) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:299) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:129) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:634) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:140) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1137) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1040) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:299) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:129) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:382) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1475) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1220) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753) ~[mule-module-spring-config-3.9.2.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762) ~[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) ~[spring-context-4.1.9.RELEASE.jar:4.1.9.RELEASE]
+	at org.mule.config.spring.SpringRegistry.doInitialise(SpringRegistry.java:108) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.registry.AbstractRegistry.initialise(AbstractRegistry.java:104) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.createSpringRegistry(SpringXmlConfigurationBuilder.java:177) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.doConfigure(SpringXmlConfigurationBuilder.java:100) ~[mule-module-spring-config-3.9.2.jar:3.9.2]
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.config.builders.AutoConfigurationBuilder.autoConfigure(AutoConfigurationBuilder.java:102) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.config.builders.AutoConfigurationBuilder.doConfigure(AutoConfigurationBuilder.java:54) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.context.DefaultMuleContextFactory$1.configure(DefaultMuleContextFactory.java:89) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.context.DefaultMuleContextFactory.doCreateMuleContext(DefaultMuleContextFactory.java:222) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.context.DefaultMuleContextFactory.createMuleContext(DefaultMuleContextFactory.java:81) ~[mule-core-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.application.DefaultMuleApplication.init(DefaultMuleApplication.java:210) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$2.execute(ArtifactWrapper.java:64) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:137) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.init(ArtifactWrapper.java:59) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:72) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DefaultArchiveDeployer.redeploy(DefaultArchiveDeployer.java:493) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DefaultArchiveDeployer.redeploy(DefaultArchiveDeployer.java:429) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.redeployModifiedArtifacts(DeploymentDirectoryWatcher.java:567) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.redeployModifiedApplications(DeploymentDirectoryWatcher.java:544) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.run(DeploymentDirectoryWatcher.java:356) ~[mule-module-launcher-3.9.2.jar:3.9.2]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_221]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[?:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[?:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+2019-08-19 12:50:14,924 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - App 'accountsapi' never started, nothing to dispose of

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:context="http://www.springframework.org/schema/context" xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-current.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+
+    <db:mysql-config name="MySQL_Configuration" host="${db.host}" port="${db.port}" user="${db.user}" password="${db.password}" database="${db.database}" doc:name="MySQL Configuration"/>
+    <context:property-placeholder location="${env}.properties"/>
+    <http:listener-config name="HTTP_Listener_TEST_Config" host="0.0.0.0" port="9090" doc:name="HTTP Listener Configuration"/>
+    <http:request-config name="HTTP_Request_Configuration" host="0.0.0.0" port="8081" basePath="/api" doc:name="HTTP Request Configuration"/>
+    <http:listener-config name="HTTP_Listener" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
+    <flow name="getAllAccountsFlow">
+        <db:select config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[SELECT * FROM ${db.tableName} WHERE accountType = #{flowVars.type}]]></db:parameterized-query>
+        </db:select>
+        <dw:transform-message doc:name="Transform Message" metadata:id="4c749ffc-8f46-45b1-ba97-60bba39fffd9">
+            <dw:input-payload doc:sample="sample_data/list_map.dwl"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+payload map ((payload01 , indexOfPayload01) -> {
+    id: payload01.accountID,
+   	firstName: (payload01.name splitBy ' ')[0],
+	lastName: (payload01.name splitBy ' ')[1],
+ 	address: payload01.street ++ " " ++ payload01.city ++ ", " ++ payload01.state,
+	postal: payload01.postal,
+	country: payload01.country
+})
+]]></dw:set-payload>
+        </dw:transform-message>
+    </flow>
+        <flow name="getSingleAccountFlow" initialState="started">
+        <db:select config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[SELECT * FROM ${db.tableName} WHERE accountID = #[message.inboundProperties.'http.uri.params'.id]]]></db:parameterized-query>
+        </db:select>
+        <logger message="#[&quot;Payload is &quot; ++ payload]" level="INFO" doc:name="Logger"/>
+        <dw:transform-message doc:name="Transform Message" metadata:id="9b84dcfc-7edf-4a17-ac6d-73a5e8095ee1">
+            <dw:input-payload doc:sample="sample_data/list_map.dwl"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+
+---
+(payload map (payload01 , indexOfPayload01) -> {
+	salesID: payload01.accountID ++ payload01.name ++ payload01.postal + payload01.creationDate
+	id: payload01.accountID,
+   	firstName: (payload01.name splitBy ' ')[0],
+	lastName: payload01.name splitBy ' ' [1 to -1] joinBy " ",
+ 	address: payload01.street ++ ", " ++ payload01.city ++ ", " ++ payload01.state,
+	postal: payload01.postal,
+	country: payload01.country,
+	creationDate: payload01.creationDate,
+	accountType: payload01.type,
+	miles: payload01.miles
+})[0]]]></dw:set-payload>
+        </dw:transform-message>
+    </flow>
+
+
+
+
+
+
+
+
+
+
+</mule>
