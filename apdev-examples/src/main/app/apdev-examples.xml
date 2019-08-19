@@ -10,7 +10,9 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <flow name="apdev-examplesFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/hello" doc:name="HTTP"/>
         <set-payload value="#['Hello world'.toUpperCase()]" doc:name="Set Payload"/>
-        <set-property propertyName="qpname" value="Max" doc:name="Property"/>
-        <logger message="#[message.inboundProperties.'http.query.params']" level="INFO" doc:name="Logger"/>
+        <set-property propertyName="qpname" value="#[message.outboundProperties.name]" doc:name="Property"/>
+        <set-variable variableName="qptype" value="#[message.inboundProperties.'http.query.params'.type]" doc:name="Variable"/>
+        <set-session-variable variableName="color" value="#['gray'.toUpperCase()]" doc:name="Session Variable"/>
+        <logger message="Name: #[message.inboundProperties.'http.query.params'.name] Type: #[flowVars.qptype] Color: #[sessionVars.color]" level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
