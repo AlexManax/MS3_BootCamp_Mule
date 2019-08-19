@@ -1,0 +1,5 @@
+#Thu Aug 15 13:33:42 EDT 2019
+encoding=UTF-8
+domain=default
+redeployment.enabled=true
+config.resources=american.xml

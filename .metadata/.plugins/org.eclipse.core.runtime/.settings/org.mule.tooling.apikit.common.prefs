@@ -1,0 +1,7 @@
+accountsapi/api_version=null
+accountsapi/users=[{"id"\:"35b4a075-ca32-4663-b4b3-d469c1bf1940","token"\:"03319e81-9333-4ceb-b995-44f6348c6ed2","userId"\:"AlexManaxMS3","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"}]
+accountsapiexchange/api_version=null
+accountsapiexchange/users=[{"id"\:"35b4a075-ca32-4663-b4b3-d469c1bf1940","token"\:"03319e81-9333-4ceb-b995-44f6348c6ed2","userId"\:"AlexManaxMS3","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"}]
+apdev-american-ws/api_version=null
+apdev-american-ws/users=[{"id"\:"35b4a075-ca32-4663-b4b3-d469c1bf1940","token"\:"03319e81-9333-4ceb-b995-44f6348c6ed2","userId"\:"AlexManaxMS3","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"}]
+eclipse.preferences.version=1

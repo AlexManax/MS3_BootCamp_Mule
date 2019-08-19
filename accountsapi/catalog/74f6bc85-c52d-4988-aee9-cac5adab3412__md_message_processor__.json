@@ -1,0 +1,15 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "object"
+        },
+        "inboundProperties": {
+            "http.query.params": {},
+            "http.remote.address": {}
+        }
+    },
+    "outputMessageMetadata": {},
+    "id": "74f6bc85-c52d-4988-aee9-cac5adab3412",
+    "version": "5.2.0.0"
+}

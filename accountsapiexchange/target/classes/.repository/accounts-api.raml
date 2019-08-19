@@ -1,0 +1,64 @@
+#%RAML 1.0
+version: v1
+title: Accounts API
+
+types:
+  Account: !include typeAccount.raml
+  Account2: !include typeAccount2.raml
+
+/accounts:
+  get:
+    description: List of Accs
+    headers:
+      Requester-ID:
+        description: persons id
+        required: true
+    queryParameters:
+      type: 
+        required: true
+        type: string
+        enum: 
+          ["personal", "business"]
+      country:
+        required: false
+        type: string
+      name:
+        required: false
+        type: string
+    responses:
+      200:
+        body:
+          application/json:
+            examples: 
+              type: Account[]
+              exemple: !include exampleAcc.raml
+      400:
+        body:
+          application/json:
+            example:
+              {"message": "it doesn't work this way"}
+  post:
+    description: Post new Acc
+    headers:
+      Requester-ID:
+        description: persons id
+        required: true
+    body:
+      application/json:
+        type: Account2[]
+        example: !include exampleAcc2.json
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {"message": "Account created (but not really)"}
+      400:
+        body:
+          application/json:
+            example:
+              {"message": "it doesn't work this way"}
+
+            
+
+  

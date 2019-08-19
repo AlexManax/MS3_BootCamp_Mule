@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd ">
+    <http:listener-config name="SpaceSips-httpListenerConfig" host="0.0.0.0" port="8081" />
+    <apikit:config name="SpaceSips-config" raml="SpaceSips.raml" consoleEnabled="false" />
+    <flow name="SpaceSips-main">
+        <http:listener config-ref="SpaceSips-httpListenerConfig" path="/api/*" />
+        <apikit:router config-ref="SpaceSips-config" />
+        <exception-strategy ref="SpaceSips-apiKitGlobalExceptionMapping" />
+    </flow>
+    <flow name="SpaceSips-console">
+        <http:listener config-ref="SpaceSips-httpListenerConfig" path="/console/*" />
+        <apikit:console config-ref="SpaceSips-config" />
+    </flow>
+    <flow name="put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config">
+        <set-payload value="#[NullPayload.getInstance()]" />
+    </flow>
+    <flow name="put:/ships/{idShip}:application/json:SpaceSips-config">
+        <set-payload value="#[NullPayload.getInstance()]" />
+    </flow>
+    <flow name="delete:/ships/{idShip}:SpaceSips-config">
+        <set-payload value="#[NullPayload.getInstance()]" />
+    </flow>
+    <flow name="delete:/ships/{idShip}/members/{idMember}:SpaceSips-config">
+        <set-payload value="#[NullPayload.getInstance()]" />
+    </flow>
+    <flow name="get:/ships:SpaceSips-config">
+        <set-payload value="{&#xA;&quot;type&quot; : &quot;Ship[]&quot;,&#xA;&quot;example&quot; : &quot;{&#xA;  &quot;idShip&quot;: 1,&#xA;  &quot;nameShip&quot;:&quot;USS Enterprise&quot;,&#xA;  &quot;crewSize&quot;:600,&#xA;  &quot;speed&quot;: 9.8,&#xA;  &quot;members&quot;: [&#xA;      {&#xA;      &quot;idMember&quot;:1,&#xA;      &quot;nameMember&quot;: &quot;Capitan Kirk&quot;,&#xA;      &quot;rank&quot;:10,&#xA;      &quot;idShip&quot;: 1&#xA;      },&#xA;      {&#xA;      &quot;idMember&quot;:2,&#xA;      &quot;nameMember&quot;: &quot;Capitan Spok&quot;,&#xA;      &quot;rank&quot;:10,&#xA;      &quot;idShip&quot;: 1&#xA;      }&#xA;    ]&#xA;}&#xA;&quot;&#xA;}" />
+    </flow>
+    <flow name="get:/ships/{idShip}:SpaceSips-config">
+        <set-payload value="{&#xA;  &quot;idShip&quot;: 1,&#xA;  &quot;nameShip&quot;:&quot;USS Enterprise&quot;,&#xA;  &quot;crewSize&quot;:600,&#xA;  &quot;speed&quot;: 9.8,&#xA;  &quot;members&quot;: [&#xA;      {&#xA;      &quot;idMember&quot;:1,&#xA;      &quot;nameMember&quot;: &quot;Capitan Kirk&quot;,&#xA;      &quot;rank&quot;:10,&#xA;      &quot;idShip&quot;: 1&#xA;      },&#xA;      {&#xA;      &quot;idMember&quot;:2,&#xA;      &quot;nameMember&quot;: &quot;Capitan Spok&quot;,&#xA;      &quot;rank&quot;:10,&#xA;      &quot;idShip&quot;: 1&#xA;      }&#xA;    ]&#xA;}" />
+    </flow>
+    <flow name="get:/ships/{idShip}/members:SpaceSips-config">
+        <set-payload value="{&#xA;&quot;type&quot; : &quot;CrewMember[]&quot;,&#xA;&quot;example&quot; : &quot;{&#xA;  &quot;idMember&quot;:1,&#xA;  &quot;nameMember&quot;: &quot;Capitan Kirk&quot;,&#xA;  &quot;rank&quot;:10,&#xA;  &quot;idShip&quot;: 1&#xA;}&#xA;&quot;&#xA;}" />
+    </flow>
+    <flow name="post:/ships/{idShip}/members:application/json:SpaceSips-config">
+        <set-payload value="#[NullPayload.getInstance()]" />
+    </flow>
+    <flow name="post:/ships:application/json:SpaceSips-config">
+        <set-payload value="#[NullPayload.getInstance()]" />
+    </flow>
+    <apikit:mapping-exception-strategy name="SpaceSips-apiKitGlobalExceptionMapping">
+        <apikit:mapping statusCode="404">
+            <apikit:exception value="org.mule.module.apikit.exception.NotFoundException" />
+            <set-property propertyName="Content-Type" value="application/json" />
+            <set-payload value="{ &quot;message&quot;: &quot;Resource not found&quot; }" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="405">
+            <apikit:exception value="org.mule.module.apikit.exception.MethodNotAllowedException" />
+            <set-property propertyName="Content-Type" value="application/json" />
+            <set-payload value="{ &quot;message&quot;: &quot;Method not allowed&quot; }" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="415">
+            <apikit:exception value="org.mule.module.apikit.exception.UnsupportedMediaTypeException" />
+            <set-property propertyName="Content-Type" value="application/json" />
+            <set-payload value="{ &quot;message&quot;: &quot;Unsupported media type&quot; }" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="406">
+            <apikit:exception value="org.mule.module.apikit.exception.NotAcceptableException" />
+            <set-property propertyName="Content-Type" value="application/json" />
+            <set-payload value="{ &quot;message&quot;: &quot;Not acceptable&quot; }" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="400">
+            <apikit:exception value="org.mule.module.apikit.exception.BadRequestException" />
+            <set-property propertyName="Content-Type" value="application/json" />
+            <set-payload value="{ &quot;message&quot;: &quot;Bad request&quot; }" />
+        </apikit:mapping>
+    </apikit:mapping-exception-strategy>
+</mule>
