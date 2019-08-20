@@ -1,0 +1,14 @@
+{
+  "flights": [
+    {
+      "airlineName": "ghjfdvmfd",
+      "price": 1,
+      "departureDate": "????",
+      "planeType": "????",
+      "origin": "????",
+      "code": "????",
+      "emptySeats": 1,
+      "destination": "????"
+    }
+  ]
+}
