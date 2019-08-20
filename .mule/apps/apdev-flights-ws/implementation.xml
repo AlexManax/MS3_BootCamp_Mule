@@ -9,6 +9,13 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
 http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
 http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd">
+    <flow name="GetFlightsFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/flights" doc:name="HTTP"/>
+        <flow-ref name="getDeltaFlightsFlow" doc:name="Flow Reference"/>
+        <logger level="INFO" doc:name="Logger"/>
+        <exception-strategy ref="Copy_of_Copy_of_globalChoice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+        
+    </flow>
     <sub-flow name="SetCodeSubFlow">
         <set-variable variableName="code" value="#[message.inboundProperties.'http.query.params'.code ==empty ? '' : message.inboundProperties.'http.query.params'.code]" doc:name="Set airport code var"/>
     </sub-flow>
@@ -68,7 +75,7 @@ payload map ((payload01, index) -> {
     <flow name="getDeltaFlightsFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/delta" allowedMethods="GET" doc:name="HTTP"/>
         <flow-ref name="SetCodeSubFlow" doc:name="Flow Reference"/>
-        <dw:transform-message doc:name="Transform Message" metadata:id="d44f23e8-68ad-4599-8655-810c80eb39f5">
+        <dw:transform-message doc:name="Transform Message">
             <dw:set-payload><![CDATA[%dw 1.0
 %output application/xml
 %namespace ns0 http://soap.training.mulesoft.com/
@@ -97,5 +104,6 @@ payload.ns0#findFlightResponse.*return map ((return , indexOfReturn) -> {
 })]]></dw:set-payload>
         </dw:transform-message>
         <logger level="INFO" doc:name="Logger"/>
+
     </flow>
 </mule>

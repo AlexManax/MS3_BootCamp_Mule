@@ -15,4 +15,17 @@ http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/cu
         <http:raml-api-configuration location="https://anypoint.mulesoft.com/exchange/api/v1/organizations/7640d26e-0b67-4944-8185-00f964f31950/assets/7640d26e-0b67-4944-8185-00f964f31950/american-flights-api/1.0.5/api/root"/>
     </http:request-config>
     <ws:consumer-config name="Delta_Web_Service_Consumer" wsdlLocation="http://mu.mulesoft-training.com/essentials/delta?wsdl" service="TicketServiceService" port="TicketServicePort" serviceAddress="http://mu.mulesoft-training.com/essentials/delta" doc:name="Web Service Consumer"/>
+    <choice-exception-strategy name="Copy_of_Copy_of_globalChoice_Exception_Strategy">
+        <catch-exception-strategy when="#[exception.causeMatches('com.mulesoft.weave.*')]" doc:name="Copy_of_Copy_of_No flights DW exception">
+            <set-payload value="NO FLIGHTS to: #[flowVars.code + '\n' + exception]" doc:name="Copy_of_Copy_of_Set Payload"/>
+            <set-property propertyName="http.status" value="400" doc:name="Copy_of_Copy_of_Property"/>
+            <logger level="INFO" doc:name="Copy_of_Copy_of_Logger"/>
+        </catch-exception-strategy>
+        <catch-exception-strategy doc:name="Copy_of_Copy_of_Data unavailoble - all other exceptions">
+            <set-payload value="DATA UNAVAILOBLE. TRY LATER #['\n' + exception]" doc:name="Copy_of_Copy_of_Set Payload"/>
+            <set-property propertyName="http.status" value="500" doc:name="Copy_of_Copy_of_Property"/>
+            <logger level="INFO" doc:name="Copy_of_Copy_of_Logger"/>
+        </catch-exception-strategy>
+    </choice-exception-strategy>
+    
 </mule>

@@ -25,7 +25,16 @@
               </typeQName>
             </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
             <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
-              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey" reference="../../../../../org.mule.common.metadata.DefaultMetaDataKey"/>
+              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey">
+                <id>findFlight</id>
+                <displayName>findFlight</displayName>
+                <category>DEFAULT</category>
+                <metaDataKeyPropertiesManager>
+                  <properties>
+                    <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+                  </properties>
+                </metaDataKeyPropertiesManager>
+              </metaDataKey>
               <derivedStructure>false</derivedStructure>
               <generatedStructure>false</generatedStructure>
             </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
@@ -153,7 +162,16 @@
               </typeQName>
             </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
             <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
-              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey" reference="../../../../../org.mule.common.metadata.DefaultMetaDataKey"/>
+              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey">
+                <id>findFlightResponse</id>
+                <displayName>findFlightResponse</displayName>
+                <category>DEFAULT</category>
+                <metaDataKeyPropertiesManager>
+                  <properties>
+                    <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+                  </properties>
+                </metaDataKeyPropertiesManager>
+              </metaDataKey>
               <derivedStructure>false</derivedStructure>
               <generatedStructure>false</generatedStructure>
             </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
@@ -513,7 +531,16 @@
               </typeQName>
             </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
             <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
-              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey" reference="../../../../../org.mule.common.metadata.DefaultMetaDataKey"/>
+              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey">
+                <id>listAllFlights</id>
+                <displayName>listAllFlights</displayName>
+                <category>DEFAULT</category>
+                <metaDataKeyPropertiesManager>
+                  <properties>
+                    <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+                  </properties>
+                </metaDataKeyPropertiesManager>
+              </metaDataKey>
               <derivedStructure>false</derivedStructure>
               <generatedStructure>false</generatedStructure>
             </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
@@ -611,7 +638,16 @@
               </typeQName>
             </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
             <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
-              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey" reference="../../../../../org.mule.common.metadata.DefaultMetaDataKey"/>
+              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey">
+                <id>listAllFlightsResponse</id>
+                <displayName>listAllFlightsResponse</displayName>
+                <category>DEFAULT</category>
+                <metaDataKeyPropertiesManager>
+                  <properties>
+                    <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+                  </properties>
+                </metaDataKeyPropertiesManager>
+              </metaDataKey>
               <derivedStructure>false</derivedStructure>
               <generatedStructure>false</generatedStructure>
             </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
@@ -650,11 +686,7 @@
                       <metaDataModelPropertiesManager>
                         <properties>
                           <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
-                            <typeQName>
-                              <namespaceURI>http://www.w3.org/2001/XMLSchema</namespaceURI>
-                              <localPart>string</localPart>
-                              <prefix></prefix>
-                            </typeQName>
+                            <typeQName reference="../../../../../../../../../../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
                           </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
                         </properties>
                       </metaDataModelPropertiesManager>
@@ -679,7 +711,7 @@
                       <metaDataModelPropertiesManager>
                         <properties>
                           <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
-                            <typeQName reference="../../../../../../org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
+                            <typeQName reference="../../../../../../../../../../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
                           </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
                         </properties>
                       </metaDataModelPropertiesManager>
@@ -704,7 +736,7 @@
                       <metaDataModelPropertiesManager>
                         <properties>
                           <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
-                            <typeQName reference="../../../../../../org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
+                            <typeQName reference="../../../../../../../../../../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
                           </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
                         </properties>
                       </metaDataModelPropertiesManager>
@@ -729,7 +761,7 @@
                       <metaDataModelPropertiesManager>
                         <properties>
                           <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
-                            <typeQName reference="../../../../../../org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
+                            <typeQName reference="../../../../../../../../../../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
                           </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
                         </properties>
                       </metaDataModelPropertiesManager>
@@ -754,11 +786,7 @@
                       <metaDataModelPropertiesManager>
                         <properties>
                           <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
-                            <typeQName>
-                              <namespaceURI>http://www.w3.org/2001/XMLSchema</namespaceURI>
-                              <localPart>int</localPart>
-                              <prefix></prefix>
-                            </typeQName>
+                            <typeQName reference="../../../../../../../../../../../../../entry[2]/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/model/fields/org.mule.common.metadata.DefaultMetaDataField[5]/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
                           </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
                         </properties>
                       </metaDataModelPropertiesManager>
@@ -783,7 +811,7 @@
                       <metaDataModelPropertiesManager>
                         <properties>
                           <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
-                            <typeQName reference="../../../../../../org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
+                            <typeQName reference="../../../../../../../../../../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
                           </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
                         </properties>
                       </metaDataModelPropertiesManager>
@@ -808,7 +836,7 @@
                       <metaDataModelPropertiesManager>
                         <properties>
                           <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
-                            <typeQName reference="../../../../../../org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
+                            <typeQName reference="../../../../../../../../../../../../../entry/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
                           </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
                         </properties>
                       </metaDataModelPropertiesManager>
@@ -833,11 +861,7 @@
                       <metaDataModelPropertiesManager>
                         <properties>
                           <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
-                            <typeQName>
-                              <namespaceURI>http://www.w3.org/2001/XMLSchema</namespaceURI>
-                              <localPart>double</localPart>
-                              <prefix></prefix>
-                            </typeQName>
+                            <typeQName reference="../../../../../../../../../../../../../entry[2]/org.mule.common.metadata.DefaultXmlMetaDataModel/fields/org.mule.common.metadata.DefaultMetaDataField/model/model/fields/org.mule.common.metadata.DefaultMetaDataField[8]/model/metaDataModelPropertiesManager/properties/org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/typeQName"/>
                           </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
                         </properties>
                       </metaDataModelPropertiesManager>
