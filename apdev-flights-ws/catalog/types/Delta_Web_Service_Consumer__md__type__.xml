@@ -25,16 +25,7 @@
               </typeQName>
             </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
             <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
-              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey">
-                <id>findFlight</id>
-                <displayName>findFlight</displayName>
-                <category>DEFAULT</category>
-                <metaDataKeyPropertiesManager>
-                  <properties>
-                    <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
-                  </properties>
-                </metaDataKeyPropertiesManager>
-              </metaDataKey>
+              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey" reference="../../../../../org.mule.common.metadata.DefaultMetaDataKey"/>
               <derivedStructure>false</derivedStructure>
               <generatedStructure>false</generatedStructure>
             </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
@@ -162,16 +153,7 @@
               </typeQName>
             </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
             <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
-              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey">
-                <id>findFlightResponse</id>
-                <displayName>findFlightResponse</displayName>
-                <category>DEFAULT</category>
-                <metaDataKeyPropertiesManager>
-                  <properties>
-                    <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
-                  </properties>
-                </metaDataKeyPropertiesManager>
-              </metaDataKey>
+              <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey" reference="../../../../../org.mule.common.metadata.DefaultMetaDataKey"/>
               <derivedStructure>false</derivedStructure>
               <generatedStructure>false</generatedStructure>
             </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>

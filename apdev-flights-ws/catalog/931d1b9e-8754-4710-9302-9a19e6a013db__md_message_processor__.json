@@ -1,9 +1,14 @@
 {
-    "inputMessageMetadata": {},
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "Delta_Web_Service_Consumer",
+            "typeId": "findFlightResponse"
+        }
+    },
     "outputMessageMetadata": {
         "messagePayload": {
             "connectorName": "#_custom_mule_metadata_type_#",
-            "typeId": "flights_json"
+            "typeId": "Flight_POJO"
         }
     },
     "id": "931d1b9e-8754-4710-9302-9a19e6a013db",

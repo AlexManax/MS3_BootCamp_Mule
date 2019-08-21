@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:context="http://www.springframework.org/schema/context" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+<mule xmlns:cluster="http://www.mulesoft.org/schema/mule/ee/cluster" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:context="http://www.springframework.org/schema/context" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:spring="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
@@ -15,16 +15,20 @@ http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/cu
         <http:raml-api-configuration location="https://anypoint.mulesoft.com/exchange/api/v1/organizations/7640d26e-0b67-4944-8185-00f964f31950/assets/7640d26e-0b67-4944-8185-00f964f31950/american-flights-api/1.0.5/api/root"/>
     </http:request-config>
     <ws:consumer-config name="Delta_Web_Service_Consumer" wsdlLocation="http://mu.mulesoft-training.com/essentials/delta?wsdl" service="TicketServiceService" port="TicketServicePort" serviceAddress="http://mu.mulesoft-training.com/essentials/delta" doc:name="Web Service Consumer"/>
-    <choice-exception-strategy name="Copy_of_Copy_of_globalChoice_Exception_Strategy">
-        <catch-exception-strategy when="#[exception.causeMatches('com.mulesoft.weave.*')]" doc:name="Copy_of_Copy_of_No flights DW exception">
-            <set-payload value="NO FLIGHTS to: #[flowVars.code + '\n' + exception]" doc:name="Copy_of_Copy_of_Set Payload"/>
-            <set-property propertyName="http.status" value="400" doc:name="Copy_of_Copy_of_Property"/>
-            <logger level="INFO" doc:name="Copy_of_Copy_of_Logger"/>
+    <configuration defaultExceptionStrategy-ref="globalChoice_Exception_Strategy" doc:name="Configuration">
+        <http:config useTransportForUris="false"/>
+    </configuration>
+    <payload-type-filter expectedType="java.util.List" name="FilteNotList" doc:name="Payload"/>
+    <choice-exception-strategy name="globalChoice_Exception_Strategy">
+        <catch-exception-strategy when="#[exception.causeMatches('com.mulesoft.weave.*')]" doc:name="No flights DW exception">
+            <set-payload value="NO FLIGHTS to: #[flowVars.code + '\n' + exception]" doc:name="Set Payload"/>
+            <set-property propertyName="http.status" value="400" doc:name="Property"/>
+            <logger level="INFO" doc:name="Logger"/>
         </catch-exception-strategy>
-        <catch-exception-strategy doc:name="Copy_of_Copy_of_Data unavailoble - all other exceptions">
-            <set-payload value="DATA UNAVAILOBLE. TRY LATER #['\n' + exception]" doc:name="Copy_of_Copy_of_Set Payload"/>
-            <set-property propertyName="http.status" value="500" doc:name="Copy_of_Copy_of_Property"/>
-            <logger level="INFO" doc:name="Copy_of_Copy_of_Logger"/>
+        <catch-exception-strategy doc:name="Data unavailoble - all other exceptions">
+            <set-payload value="DATA UNAVAILOBLE. TRY LATER #['\n' + exception]" doc:name="Set Payload"/>
+            <set-property propertyName="http.status" value="500" doc:name="Property"/>
+            <logger level="INFO" doc:name="Logger"/>
         </catch-exception-strategy>
     </choice-exception-strategy>
     
