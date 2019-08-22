@@ -8498,3 +8498,476 @@ Message properties:
     MULE_ENCODING=UTF-8
   SESSION scoped properties:
 }
+2019-08-22 16:24:43,868 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'spaceships'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-22 16:24:43,873 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: SpaceSips-main
+2019-08-22 16:24:43,874 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: SpaceSips-main.stage1
+2019-08-22 16:24:44,000 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: SpaceSips-console
+2019-08-22 16:24:44,001 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: SpaceSips-console.stage1
+2019-08-22 16:24:44,079 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/ships:SpaceSips-config
+2019-08-22 16:24:44,079 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/ships:SpaceSips-config.stage1
+2019-08-22 16:24:44,105 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:24:44,105 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:24:44,200 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/ships/{idShip}/members:SpaceSips-config
+2019-08-22 16:24:44,200 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/ships/{idShip}/members:SpaceSips-config.stage1
+2019-08-22 16:24:44,284 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: put:/ships/{idShip}:application/json:SpaceSips-config
+2019-08-22 16:24:44,284 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: put:/ships/{idShip}:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:44,405 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config
+2019-08-22 16:24:44,405 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:44,609 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: delete:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:24:44,609 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: delete:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:24:44,692 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config
+2019-08-22 16:24:44,692 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config.stage1
+2019-08-22 16:24:44,816 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: post:/ships/{idShip}/members:application/json:SpaceSips-config
+2019-08-22 16:24:44,816 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: post:/ships/{idShip}/members:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:44,892 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: post:/ships:application/json:SpaceSips-config
+2019-08-22 16:24:44,892 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: post:/ships:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:45,012 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: getAllShips
+2019-08-22 16:24:45,012 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: getAllShips.stage1
+2019-08-22 16:24:45,213 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: getShipByID
+2019-08-22 16:24:45,213 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: getShipByID.stage1
+2019-08-22 16:24:45,330 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: getMemberByID
+2019-08-22 16:24:45,330 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: getMemberByID.stage1
+2019-08-22 16:24:45,417 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: putShip
+2019-08-22 16:24:45,417 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: putShip.stage1
+2019-08-22 16:24:45,619 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: putMember
+2019-08-22 16:24:45,619 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: putMember.stage1
+2019-08-22 16:24:45,823 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2019-08-22 16:24:45,829 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081
+2019-08-22 16:24:45,830 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2019-08-22 16:24:45,830 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2019-08-22 16:24:45,836 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'spaceships'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-22 16:24:45,837 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2019-08-22 16:24:45,837 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: SpaceSips-main
+2019-08-22 16:24:45,838 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: SpaceSips-main.stage1
+2019-08-22 16:24:45,840 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: SpaceSips-console
+2019-08-22 16:24:45,840 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: SpaceSips-console.stage1
+2019-08-22 16:24:45,840 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/ships:SpaceSips-config
+2019-08-22 16:24:45,840 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/ships:SpaceSips-config.stage1
+2019-08-22 16:24:45,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:24:45,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:24:45,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/ships/{idShip}/members:SpaceSips-config
+2019-08-22 16:24:45,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/ships/{idShip}/members:SpaceSips-config.stage1
+2019-08-22 16:24:45,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: put:/ships/{idShip}:application/json:SpaceSips-config
+2019-08-22 16:24:45,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: put:/ships/{idShip}:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:45,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config
+2019-08-22 16:24:45,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:45,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: delete:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:24:45,841 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: delete:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:24:45,842 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config
+2019-08-22 16:24:45,842 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config.stage1
+2019-08-22 16:24:45,842 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: post:/ships/{idShip}/members:application/json:SpaceSips-config
+2019-08-22 16:24:45,842 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: post:/ships/{idShip}/members:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:45,842 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: post:/ships:application/json:SpaceSips-config
+2019-08-22 16:24:45,842 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: post:/ships:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:45,842 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: getAllShips
+2019-08-22 16:24:45,842 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: getAllShips.stage1
+2019-08-22 16:24:45,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: getShipByID
+2019-08-22 16:24:45,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: getShipByID.stage1
+2019-08-22 16:24:45,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: getMemberByID
+2019-08-22 16:24:45,843 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: getMemberByID.stage1
+2019-08-22 16:24:45,844 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: putShip
+2019-08-22 16:24:45,844 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: putShip.stage1
+2019-08-22 16:24:45,844 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: putMember
+2019-08-22 16:24:45,844 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: putMember.stage1
+2019-08-22 16:24:45,845 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2019-08-22 16:24:45,942 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@64712be: startup date [Thu Aug 22 16:12:50 EDT 2019]; root of context hierarchy
+2019-08-22 16:24:45,952 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "spaceships" shut down normally on: 8/22/19 4:24 PM    *
+* Up for: 0 days, 0 hours, 11 mins, 52.763 sec                       *
+**********************************************************************
+2019-08-22 16:24:46,183 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'spaceships'                            +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-22 16:24:46,188 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-08-22 16:24:46,191 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-08-22 16:24:46,199 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-08-22 16:24:46,199 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-08-22 16:24:46,200 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@7d5fdfa3: startup date [Thu Aug 22 16:24:46 EDT 2019]; root of context hierarchy
+2019-08-22 16:24:46,433 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-08-22 16:24:46,534 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/spaceships/queue-tx-log/tx1.log and /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/spaceships/queue-tx-log/tx2.log
+2019-08-22 16:24:46,535 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/spaceships/queue-xa-tx-log/tx1.log and /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/spaceships/queue-xa-tx-log/tx2.log
+2019-08-22 16:24:46,544 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2019-08-22 16:24:46,545 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: SpaceSips-main
+2019-08-22 16:24:46,545 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2019-08-22 16:24:46,545 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2019-08-22 16:24:46,545 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2019-08-22 16:24:46,545 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2019-08-22 16:24:46,545 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2019-08-22 16:24:46,548 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: SpaceSips-main.stage1
+2019-08-22 16:24:46,549 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: SpaceSips-console
+2019-08-22 16:24:46,549 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@101085f8
+2019-08-22 16:24:46,551 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: SpaceSips-console.stage1
+2019-08-22 16:24:46,552 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/ships:SpaceSips-config
+2019-08-22 16:24:46,552 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@75a4812e
+2019-08-22 16:24:46,553 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/ships:SpaceSips-config.stage1
+2019-08-22 16:24:46,554 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:24:46,554 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@20f49853
+2019-08-22 16:24:46,556 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:24:46,556 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/ships/{idShip}/members:SpaceSips-config
+2019-08-22 16:24:46,556 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@735a923b
+2019-08-22 16:24:46,559 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/ships/{idShip}/members:SpaceSips-config.stage1
+2019-08-22 16:24:46,559 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put:/ships/{idShip}:application/json:SpaceSips-config
+2019-08-22 16:24:46,560 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5f1fc935
+2019-08-22 16:24:46,562 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put:/ships/{idShip}:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:46,562 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config
+2019-08-22 16:24:46,562 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@61903d6b
+2019-08-22 16:24:46,565 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:46,565 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: delete:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:24:46,565 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6e3d0d1e
+2019-08-22 16:24:46,568 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: delete:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:24:46,568 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config
+2019-08-22 16:24:46,568 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3e55d6b9
+2019-08-22 16:24:46,571 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config.stage1
+2019-08-22 16:24:46,571 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/ships/{idShip}/members:application/json:SpaceSips-config
+2019-08-22 16:24:46,571 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6fa318b6
+2019-08-22 16:24:46,574 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/ships/{idShip}/members:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:46,574 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/ships:application/json:SpaceSips-config
+2019-08-22 16:24:46,574 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@35ac28c4
+2019-08-22 16:24:46,577 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/ships:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:46,578 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: getAllShips
+2019-08-22 16:24:46,578 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@60ec849b
+2019-08-22 16:24:46,581 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: getAllShips.stage1
+2019-08-22 16:24:46,585 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: getShipByID
+2019-08-22 16:24:46,585 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4614b9b3
+2019-08-22 16:24:46,588 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: getShipByID.stage1
+2019-08-22 16:24:46,590 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: getMemberByID
+2019-08-22 16:24:46,590 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5dd9cf9c
+2019-08-22 16:24:46,593 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: getMemberByID.stage1
+2019-08-22 16:24:46,593 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: putShip
+2019-08-22 16:24:46,593 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@79884eaf
+2019-08-22 16:24:46,595 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: putShip.stage1
+2019-08-22 16:24:46,595 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: putMember
+2019-08-22 16:24:46,595 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@487662
+2019-08-22 16:24:46,597 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: putMember.stage1
+2019-08-22 16:24:46,597 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: postShip
+2019-08-22 16:24:46,598 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1769d9bd
+2019-08-22 16:24:46,600 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: postShip.stage1
+2019-08-22 16:24:46,735 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2019-08-22 16:24:46,750 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/SpaceSips.xml'}, ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/dbservice.xml'}, ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/global.xml'}]"
+2019-08-22 16:24:46,750 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/SpaceSips.xml'}, ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/dbservice.xml'}, ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/global.xml'}]"
+2019-08-22 16:24:46,751 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'spaceships'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-22 16:24:46,755 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2019-08-22 16:24:46,755 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2019-08-22 16:24:46,760 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2019-08-22 16:24:46,764 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2019-08-22 16:24:46,764 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: SpaceSips-main
+2019-08-22 16:24:46,765 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: SpaceSips-main.stage1
+2019-08-22 16:24:46,769 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2019-08-22 16:24:46,769 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: SpaceSips-console
+2019-08-22 16:24:46,769 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: SpaceSips-console.stage1
+2019-08-22 16:24:46,772 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/ships:SpaceSips-config
+2019-08-22 16:24:46,772 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/ships:SpaceSips-config.stage1
+2019-08-22 16:24:46,773 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:24:46,773 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:24:46,774 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/ships/{idShip}/members:SpaceSips-config
+2019-08-22 16:24:46,775 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/ships/{idShip}/members:SpaceSips-config.stage1
+2019-08-22 16:24:46,777 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put:/ships/{idShip}:application/json:SpaceSips-config
+2019-08-22 16:24:46,777 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put:/ships/{idShip}:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:46,785 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config
+2019-08-22 16:24:46,785 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:46,787 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: delete:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:24:46,787 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: delete:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:24:46,788 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config
+2019-08-22 16:24:46,788 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config.stage1
+2019-08-22 16:24:46,790 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/ships/{idShip}/members:application/json:SpaceSips-config
+2019-08-22 16:24:46,790 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/ships/{idShip}/members:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:46,792 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/ships:application/json:SpaceSips-config
+2019-08-22 16:24:46,792 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/ships:application/json:SpaceSips-config.stage1
+2019-08-22 16:24:46,793 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: getAllShips
+2019-08-22 16:24:46,793 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: getAllShips.stage1
+2019-08-22 16:24:46,796 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: getShipByID
+2019-08-22 16:24:46,796 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: getShipByID.stage1
+2019-08-22 16:24:46,798 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.config.spring.SpringRegistry - Spring registry already contains an object named 'threadpool.[spaceships].ScatterGatherWorkManager'. The previous object will be overwritten.
+2019-08-22 16:24:46,798 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: getMemberByID
+2019-08-22 16:24:46,798 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: getMemberByID.stage1
+2019-08-22 16:24:46,799 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: putShip
+2019-08-22 16:24:46,799 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: putShip.stage1
+2019-08-22 16:24:46,801 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: putMember
+2019-08-22 16:24:46,801 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: putMember.stage1
+2019-08-22 16:24:46,802 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: postShip
+2019-08-22 16:24:46,803 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: postShip.stage1
+2019-08-22 16:24:46,813 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2019-08-22 16:24:46,819 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: spaceships                                            *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2019-08-22 16:26:31,885 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'spaceships'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-22 16:26:31,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: SpaceSips-main
+2019-08-22 16:26:31,886 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: SpaceSips-main.stage1
+2019-08-22 16:26:31,940 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: SpaceSips-console
+2019-08-22 16:26:31,940 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: SpaceSips-console.stage1
+2019-08-22 16:26:32,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/ships:SpaceSips-config
+2019-08-22 16:26:32,075 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/ships:SpaceSips-config.stage1
+2019-08-22 16:26:32,143 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:26:32,143 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:26:32,309 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: get:/ships/{idShip}/members:SpaceSips-config
+2019-08-22 16:26:32,309 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: get:/ships/{idShip}/members:SpaceSips-config.stage1
+2019-08-22 16:26:32,345 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: put:/ships/{idShip}:application/json:SpaceSips-config
+2019-08-22 16:26:32,345 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: put:/ships/{idShip}:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:32,548 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config
+2019-08-22 16:26:32,548 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:32,752 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: delete:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:26:32,753 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: delete:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:26:32,956 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config
+2019-08-22 16:26:32,956 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config.stage1
+2019-08-22 16:26:33,140 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: post:/ships/{idShip}/members:application/json:SpaceSips-config
+2019-08-22 16:26:33,140 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: post:/ships/{idShip}/members:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:33,345 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: post:/ships:application/json:SpaceSips-config
+2019-08-22 16:26:33,345 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: post:/ships:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:33,412 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: getAllShips
+2019-08-22 16:26:33,412 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: getAllShips.stage1
+2019-08-22 16:26:33,564 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: getShipByID
+2019-08-22 16:26:33,564 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: getShipByID.stage1
+2019-08-22 16:26:33,747 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: getMemberByID
+2019-08-22 16:26:33,747 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: getMemberByID.stage1
+2019-08-22 16:26:33,816 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: putShip
+2019-08-22 16:26:33,816 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: putShip.stage1
+2019-08-22 16:26:33,966 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: putMember
+2019-08-22 16:26:33,966 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: putMember.stage1
+2019-08-22 16:26:34,167 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: postShip
+2019-08-22 16:26:34,167 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: postShip.stage1
+2019-08-22 16:26:34,372 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2019-08-22 16:26:34,375 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://0.0.0.0:8081
+2019-08-22 16:26:34,376 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2019-08-22 16:26:34,376 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2019-08-22 16:26:34,379 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'spaceships'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-22 16:26:34,379 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2019-08-22 16:26:34,379 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: SpaceSips-main
+2019-08-22 16:26:34,379 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: SpaceSips-main.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: SpaceSips-console
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: SpaceSips-console.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/ships:SpaceSips-config
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/ships:SpaceSips-config.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/ships/{idShip}/members:SpaceSips-config
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/ships/{idShip}/members:SpaceSips-config.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: put:/ships/{idShip}:application/json:SpaceSips-config
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: put:/ships/{idShip}:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: delete:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: delete:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: post:/ships/{idShip}/members:application/json:SpaceSips-config
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: post:/ships/{idShip}/members:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: post:/ships:application/json:SpaceSips-config
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: post:/ships:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: getAllShips
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: getAllShips.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: getShipByID
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: getShipByID.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: getMemberByID
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: getMemberByID.stage1
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: putShip
+2019-08-22 16:26:34,380 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: putShip.stage1
+2019-08-22 16:26:34,381 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: putMember
+2019-08-22 16:26:34,381 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: putMember.stage1
+2019-08-22 16:26:34,381 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: postShip
+2019-08-22 16:26:34,381 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: postShip.stage1
+2019-08-22 16:26:34,382 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2019-08-22 16:26:34,391 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@7d5fdfa3: startup date [Thu Aug 22 16:24:46 EDT 2019]; root of context hierarchy
+2019-08-22 16:26:34,395 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "spaceships" shut down normally on: 8/22/19 4:26 PM    *
+* Up for: 0 days, 0 hours, 1 mins, 47.644 sec                        *
+**********************************************************************
+2019-08-22 16:26:34,435 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'spaceships'                            +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-22 16:26:34,439 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2019-08-22 16:26:34,441 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2019-08-22 16:26:34,450 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2019-08-22 16:26:34,450 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2019-08-22 16:26:34,451 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@7889d551: startup date [Thu Aug 22 16:26:34 EDT 2019]; root of context hierarchy
+2019-08-22 16:26:34,637 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-08-22 16:26:34,747 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/spaceships/queue-tx-log/tx1.log and /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/spaceships/queue-tx-log/tx2.log
+2019-08-22 16:26:34,747 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/spaceships/queue-xa-tx-log/tx1.log and /Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/./.mule/spaceships/queue-xa-tx-log/tx2.log
+2019-08-22 16:26:34,755 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2019-08-22 16:26:34,756 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: SpaceSips-main
+2019-08-22 16:26:34,756 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=404, exceptions=[org.mule.module.apikit.exception.NotFoundException]}
+2019-08-22 16:26:34,756 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=405, exceptions=[org.mule.module.apikit.exception.MethodNotAllowedException]}
+2019-08-22 16:26:34,756 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=415, exceptions=[org.mule.module.apikit.exception.UnsupportedMediaTypeException]}
+2019-08-22 16:26:34,756 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=406, exceptions=[org.mule.module.apikit.exception.NotAcceptableException]}
+2019-08-22 16:26:34,756 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.MappingExceptionListener - Initialising exception listener: MappingExceptionListener{statusCode=400, exceptions=[org.mule.module.apikit.exception.BadRequestException]}
+2019-08-22 16:26:34,759 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: SpaceSips-main.stage1
+2019-08-22 16:26:34,760 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: SpaceSips-console
+2019-08-22 16:26:34,760 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2251152d
+2019-08-22 16:26:34,763 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: SpaceSips-console.stage1
+2019-08-22 16:26:34,763 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/ships:SpaceSips-config
+2019-08-22 16:26:34,763 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@19f0653e
+2019-08-22 16:26:34,765 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/ships:SpaceSips-config.stage1
+2019-08-22 16:26:34,765 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:26:34,765 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2b33ff1f
+2019-08-22 16:26:34,768 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:26:34,768 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/ships/{idShip}/members:SpaceSips-config
+2019-08-22 16:26:34,768 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1c4b937b
+2019-08-22 16:26:34,770 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/ships/{idShip}/members:SpaceSips-config.stage1
+2019-08-22 16:26:34,770 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put:/ships/{idShip}:application/json:SpaceSips-config
+2019-08-22 16:26:34,770 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1df46c47
+2019-08-22 16:26:34,772 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put:/ships/{idShip}:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:34,772 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config
+2019-08-22 16:26:34,772 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@721ccbcd
+2019-08-22 16:26:34,774 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:34,774 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/ships:application/json:SpaceSips-config
+2019-08-22 16:26:34,774 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@20448902
+2019-08-22 16:26:34,777 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/ships:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:34,777 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/ships/{idShip}/members:application/json:SpaceSips-config
+2019-08-22 16:26:34,777 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@53f8cdea
+2019-08-22 16:26:34,779 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/ships/{idShip}/members:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:34,779 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: delete:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:26:34,779 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@77abec7f
+2019-08-22 16:26:34,830 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: delete:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:26:34,830 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config
+2019-08-22 16:26:34,830 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4eeb56b7
+2019-08-22 16:26:34,835 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config.stage1
+2019-08-22 16:26:34,835 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: getAllShips
+2019-08-22 16:26:34,835 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@55c3f5f6
+2019-08-22 16:26:34,838 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: getAllShips.stage1
+2019-08-22 16:26:34,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: getShipByID
+2019-08-22 16:26:34,839 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@15711aeb
+2019-08-22 16:26:34,842 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: getShipByID.stage1
+2019-08-22 16:26:34,844 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: getMemberByID
+2019-08-22 16:26:34,844 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6b476815
+2019-08-22 16:26:34,847 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: getMemberByID.stage1
+2019-08-22 16:26:34,848 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: putShip
+2019-08-22 16:26:34,848 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@135f3890
+2019-08-22 16:26:34,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: putShip.stage1
+2019-08-22 16:26:34,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: putMember
+2019-08-22 16:26:34,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3dfd5bce
+2019-08-22 16:26:34,852 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: putMember.stage1
+2019-08-22 16:26:34,852 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: postShip
+2019-08-22 16:26:34,852 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@56de4140
+2019-08-22 16:26:34,854 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: postShip.stage1
+2019-08-22 16:26:34,973 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2019-08-22 16:26:34,986 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/SpaceSips.xml'}, ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/dbservice.xml'}, ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/global.xml'}]"
+2019-08-22 16:26:34,986 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/SpaceSips.xml'}, ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/dbservice.xml'}, ConfigResource{resourceName='/Users/alexp/Desktop/My_projects/MS3/MuleSoft/.mule/apps/spaceships/global.xml'}]"
+2019-08-22 16:26:34,987 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'spaceships'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2019-08-22 16:26:34,990 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2019-08-22 16:26:34,990 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2019-08-22 16:26:34,994 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2019-08-22 16:26:34,997 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2019-08-22 16:26:34,998 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: SpaceSips-main
+2019-08-22 16:26:34,998 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: SpaceSips-main.stage1
+2019-08-22 16:26:35,002 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2019-08-22 16:26:35,002 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: SpaceSips-console
+2019-08-22 16:26:35,002 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: SpaceSips-console.stage1
+2019-08-22 16:26:35,004 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/ships:SpaceSips-config
+2019-08-22 16:26:35,004 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/ships:SpaceSips-config.stage1
+2019-08-22 16:26:35,005 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:26:35,005 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:26:35,006 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/ships/{idShip}/members:SpaceSips-config
+2019-08-22 16:26:35,006 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/ships/{idShip}/members:SpaceSips-config.stage1
+2019-08-22 16:26:35,008 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put:/ships/{idShip}:application/json:SpaceSips-config
+2019-08-22 16:26:35,008 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put:/ships/{idShip}:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:35,010 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config
+2019-08-22 16:26:35,010 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:35,012 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/ships:application/json:SpaceSips-config
+2019-08-22 16:26:35,012 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/ships:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:35,015 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/ships/{idShip}/members:application/json:SpaceSips-config
+2019-08-22 16:26:35,015 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/ships/{idShip}/members:application/json:SpaceSips-config.stage1
+2019-08-22 16:26:35,017 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: delete:/ships/{idShip}:SpaceSips-config
+2019-08-22 16:26:35,017 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: delete:/ships/{idShip}:SpaceSips-config.stage1
+2019-08-22 16:26:35,018 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config
+2019-08-22 16:26:35,018 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: delete:/ships/{idShip}/members/{idMember}:SpaceSips-config.stage1
+2019-08-22 16:26:35,019 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: getAllShips
+2019-08-22 16:26:35,019 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: getAllShips.stage1
+2019-08-22 16:26:35,021 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: getShipByID
+2019-08-22 16:26:35,021 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: getShipByID.stage1
+2019-08-22 16:26:35,022 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.config.spring.SpringRegistry - Spring registry already contains an object named 'threadpool.[spaceships].ScatterGatherWorkManager'. The previous object will be overwritten.
+2019-08-22 16:26:35,022 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: getMemberByID
+2019-08-22 16:26:35,022 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: getMemberByID.stage1
+2019-08-22 16:26:35,023 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: putShip
+2019-08-22 16:26:35,023 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: putShip.stage1
+2019-08-22 16:26:35,024 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: putMember
+2019-08-22 16:26:35,024 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: putMember.stage1
+2019-08-22 16:26:35,026 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: postShip
+2019-08-22 16:26:35,026 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: postShip.stage1
+2019-08-22 16:26:35,032 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2019-08-22 16:26:35,037 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: spaceships                                            *
+* OS encoding: /, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2019-08-22 16:26:40,336 [[spaceships].SpaceSips-httpListenerConfig.worker.02] INFO  org.mule.api.processor.LoggerMessageProcessor - 
+org.mule.DefaultMuleMessage
+{
+  id=25cef5e0-c51b-11e9-9cdb-a483e73278bd
+  payload=java.lang.Integer
+  correlationId=<not set>
+  correlationGroup=-1
+  correlationSeq=-1
+  encoding=UTF-8
+  exceptionPayload=<not set>
+
+Message properties:
+  INVOCATION scoped properties:
+    _ApikitResponseTransformer_AcceptedHeaders=*/*
+    _ApikitResponseTransformer_apikitRouterRequest=yes
+    _ApikitResponseTransformer_contractMimeTypes=[]
+  INBOUND scoped properties:
+    accept=*/*
+    accept-encoding=gzip, deflate
+    authorization=Basic QWxleDp4eHg=
+    cache-control=no-cache
+    connection=keep-alive
+    content-length=127
+    content-type=application/json
+    cookie=JSESSIONID=F1ABCFD0B9C4457CFF11257700F84038
+    host=localhost:8081
+    http.listener.path=/*
+    http.method=POST
+    http.query.params=ParameterMap{[]}
+    http.query.string=
+    http.relative.path=/ships
+    http.remote.address=/127.0.0.1:60165
+    http.request.path=/ships
+    http.request.uri=/ships
+    http.scheme=http
+    http.uri.params=ParameterMap{[]}
+    http.version=HTTP/1.1
+    postman-token=d29c749e-ba0a-4e84-8848-89f45af7bb57
+    user-agent=PostmanRuntime/7.15.2
+  OUTBOUND scoped properties:
+    MULE_ENCODING=UTF-8
+  SESSION scoped properties:
+}

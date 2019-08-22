@@ -11748,3 +11748,43 @@ org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.mule.tooling.eventBus 4 0 2019-08-22 16:15:35.967
+!MESSAGE Unexpected error.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException
+
+!ENTRY org.mule.tooling.eventBus 4 0 2019-08-22 16:15:35.968
+!MESSAGE Unexpected error.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException
+
+!ENTRY org.mule.tooling.eventBus 4 0 2019-08-22 16:15:41.827
+!MESSAGE Unexpected error.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException
+
+!ENTRY org.mule.tooling.eventBus 4 0 2019-08-22 16:15:41.827
+!MESSAGE Unexpected error.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException
+
+!ENTRY org.mule.tooling.eventBus 4 0 2019-08-22 16:15:47.910
+!MESSAGE Unexpected error.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException
+
+!ENTRY org.mule.tooling.eventBus 4 0 2019-08-22 16:15:47.910
+!MESSAGE Unexpected error.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException
+
+!ENTRY org.mule.tooling.eventBus 4 0 2019-08-22 16:15:51.446
+!MESSAGE Unexpected error.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException
+
+!ENTRY org.mule.tooling.eventBus 4 0 2019-08-22 16:15:51.447
+!MESSAGE Unexpected error.
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException

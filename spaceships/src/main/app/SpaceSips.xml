@@ -29,16 +29,16 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
     <flow name="put:/ships/{idShip}/members/{idMember}:application/json:SpaceSips-config">
         <flow-ref name="putMember" doc:name="Flow Reference"/>
     </flow>
-    <flow name="delete:/ships/{idShip}:SpaceSips-config">
-        <set-payload value="#[NullPayload.getInstance()]" doc:name="Set Payload"/>
-    </flow>
-    <flow name="delete:/ships/{idShip}/members/{idMember}:SpaceSips-config">
-        <set-payload value="#[NullPayload.getInstance()]" doc:name="Set Payload"/>
+    <flow name="post:/ships:application/json:SpaceSips-config">
+        <flow-ref name="postShip" doc:name="Flow Reference"/>
     </flow>
     <flow name="post:/ships/{idShip}/members:application/json:SpaceSips-config">
         <set-payload value="#[NullPayload.getInstance()]" doc:name="Set Payload"/>
     </flow>
-    <flow name="post:/ships:application/json:SpaceSips-config">
+    <flow name="delete:/ships/{idShip}:SpaceSips-config">
+        <set-payload value="#[NullPayload.getInstance()]" doc:name="Set Payload"/>
+    </flow>
+    <flow name="delete:/ships/{idShip}/members/{idMember}:SpaceSips-config">
         <set-payload value="#[NullPayload.getInstance()]" doc:name="Set Payload"/>
     </flow>
     <apikit:mapping-exception-strategy name="SpaceSips-apiKitGlobalExceptionMapping">
