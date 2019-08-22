@@ -1,0 +1,28 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "ShipJava"
+        },
+        "flowVariables": {
+            "xxx": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "ship_json"
+            }
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "memberJava"
+        },
+        "flowVariables": {
+            "memberList": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "ship_json"
+            }
+        }
+    },
+    "id": "fe27c97d-d7c3-404e-961b-b5c36fdc1b32",
+    "version": "5.2.0.0"
+}

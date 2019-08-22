@@ -1,0 +1,13 @@
+{
+    "inputMessageMetadata": {
+        "flowVariables": {
+            "members": {},
+            "shipsList": {}
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {}
+    },
+    "id": "513b374a-0309-4087-b782-2739f9eabb98",
+    "version": "5.2.0.0"
+}
