@@ -80,7 +80,7 @@
         </metaDataFieldPropertyManager>
       </org.mule.common.metadata.DefaultMetaDataField>
       <org.mule.common.metadata.DefaultMetaDataField>
-        <name>rank</name>
+        <name>rankMember</name>
         <model class="org.mule.common.metadata.DefaultSimpleMetaDataModel">
           <dataType>INTEGER</dataType>
           <metaDataModelPropertiesManager>

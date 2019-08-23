@@ -156,4 +156,60 @@ payload map ((payload01 , indexOfPayload01) -> {
         </db:update>
         <logger level="INFO" doc:name="Logger"/>
     </flow>
+    <flow name="postShip">
+        <dw:transform-message doc:name="Transform Message" metadata:id="e2245f54-d617-4795-b2b8-7942a635e5ef">
+            <dw:input-payload mimeType="application/json"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	crewSize: payload.crewSize,
+	idShip: payload.idShip,
+	memberList: payload.members map ((member , indexOfMember) -> {
+		idMember: member.idMember,
+		idShip: member.idShip,
+		nameMember: member.nameMember
+	}),
+	nameShip: payload.nameShip,
+	speed: payload.speed
+} as :object {
+	class : "com.ms3.bootcamp.ships.Ship"
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[INSERT INTO ships(nameship, crewsize, speed) value ( #[payload.nameShip] , #[payload.crewSize], #[payload.speed])]]></db:parameterized-query>
+        </db:insert>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="postMember">
+        <dw:transform-message doc:name="Transform Message" metadata:id="e2245f54-d617-4795-b2b8-7942a635e5ef">
+            <dw:input-payload mimeType="application/json"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	idShip: payload.idShip,
+	nameMember: payload.nameMember,
+	rankMember: payload.rankMember
+} as :object {
+	class : "com.ms3.bootcamp.members.Member"
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[INSERT INTO crewmembers(namemember, rankmember, idship) value ( #[payload.nameMember] , #[payload.rankMember], #[payload.idShip])]]></db:parameterized-query>
+        </db:insert>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="deleteShip">
+        <db:delete config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[DELETE FROM ships WHERE idShip = #[flowVars.idShip]]]></db:parameterized-query>
+        </db:delete>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="deleteMember">
+        <db:delete config-ref="MySQL_Configuration" target="#[flowVars.dbreport]" doc:name="Database">
+            <db:parameterized-query><![CDATA[DELETE FROM crewmembers WHERE idMember = #[flowVars.idMember]]]></db:parameterized-query>
+        </db:delete>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
 </mule>

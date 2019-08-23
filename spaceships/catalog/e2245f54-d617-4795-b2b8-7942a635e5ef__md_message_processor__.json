@@ -2,13 +2,13 @@
     "inputMessageMetadata": {
         "messagePayload": {
             "connectorName": "#_custom_mule_metadata_type_#",
-            "typeId": "ship_json"
+            "typeId": "member_json"
         }
     },
     "outputMessageMetadata": {
         "messagePayload": {
             "connectorName": "#_custom_mule_metadata_type_#",
-            "typeId": "ShipJava"
+            "typeId": "memberJava"
         }
     },
     "id": "e2245f54-d617-4795-b2b8-7942a635e5ef",

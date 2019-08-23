@@ -33,13 +33,13 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
         <flow-ref name="postShip" doc:name="Flow Reference"/>
     </flow>
     <flow name="post:/ships/{idShip}/members:application/json:SpaceSips-config">
-        <set-payload value="#[NullPayload.getInstance()]" doc:name="Set Payload"/>
+        <flow-ref name="postMember" doc:name="Flow Reference"/>
     </flow>
     <flow name="delete:/ships/{idShip}:SpaceSips-config">
-        <set-payload value="#[NullPayload.getInstance()]" doc:name="Set Payload"/>
+        <flow-ref name="deleteShip" doc:name="Flow Reference"/>
     </flow>
     <flow name="delete:/ships/{idShip}/members/{idMember}:SpaceSips-config">
-        <set-payload value="#[NullPayload.getInstance()]" doc:name="Set Payload"/>
+        <flow-ref name="deleteMember" doc:name="Flow Reference"/>
     </flow>
     <apikit:mapping-exception-strategy name="SpaceSips-apiKitGlobalExceptionMapping">
         <apikit:mapping statusCode="404">
