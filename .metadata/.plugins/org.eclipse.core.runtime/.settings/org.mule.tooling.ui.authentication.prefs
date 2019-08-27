@@ -1,5 +1,5 @@
-authenticated.users=[{"id"\:"35b4a075-ca32-4663-b4b3-d469c1bf1940","token"\:"03319e81-9333-4ceb-b995-44f6348c6ed2","userId"\:"AlexManaxMS3","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"}]
-current.token=03319e81-9333-4ceb-b995-44f6348c6ed2
+authenticated.users=[{"id"\:"35b4a075-ca32-4663-b4b3-d469c1bf1940","token"\:"604f9589-920e-4ed8-99b6-ab838c205d5f","userId"\:"AlexManaxMS3","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"}]
+current.token=604f9589-920e-4ed8-99b6-ab838c205d5f
 current.user=AlexManaxMS3
 eclipse.preferences.version=1
 org.mule.tooling.amc.apps={"userProjectMap"\:{"AlexManaxMS3"\:{"apdev-american-ws"\:"{\\"applicationName\\"\:\\"apdev-american-ws1\\",\\"muleRuntime\\"\:\\"3.9.3\\",\\"properties\\"\:{\\"env\\"\:\\"DEV\\"}}"}}}

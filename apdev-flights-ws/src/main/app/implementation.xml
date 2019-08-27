@@ -11,7 +11,7 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
 http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd">
     <flow name="GetFlightsFlow">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/flights" doc:name="HTTP"/>
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/flights" doc:name="HTTP" allowedMethods="GET"/>
         <set-variable variableName="airline" value="#[message.inboundProperties.'http.query.params'.airline]" doc:name="Set airline var"/>
         <flow-ref name="SetCodeSubFlow" doc:name="Flow Reference"/>
         <choice doc:name="Choice">
@@ -160,5 +160,31 @@ payload.ns0#findFlightResponse.*return map ((return , indexOfReturn) -> {
 flatten payload]]></dw:set-payload>
         </dw:transform-message>
         <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="postFlightFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/flights" allowedMethods="POST" doc:name="HTTP"/>
+        <dw:transform-message doc:name="Transform Message" metadata:id="2bd180e3-0303-41cc-9247-2f07b6e9ad4a">
+            <dw:input-payload doc:sample="sample_data/list_json.json" mimeType="application/json"/>
+            <dw:set-payload resource="classpath:json_flight_playground.dwl"/>
+            <dw:set-variable variableName="xml"><![CDATA[%dw 1.0
+%output application/xml
+---
+data: {
+	hub: "MUA" ++ "v",
+	flight @(airline: payload[0].airline): {
+		code: payload.toAirportCode
+		
+	}
+
+}]]></dw:set-variable>
+        </dw:transform-message>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="getTotalSeats">
+        <expression-component doc:name="Expression"><![CDATA[if (type.contains('737')) {
+	payload = 150;
+} else {
+	payload = 300;
+}]]></expression-component>
     </flow>
 </mule>
