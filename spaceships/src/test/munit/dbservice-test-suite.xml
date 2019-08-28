@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:wmq="http://www.mulesoft.org/schema/mule/ee/wmq" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:core="http://www.mulesoft.org/schema/mule/core" xmlns:mock="http://www.mulesoft.org/schema/mule/mock" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/mock http://www.mulesoft.org/schema/mule/mock/current/mule-mock.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/ee/wmq http://www.mulesoft.org/schema/mule/ee/wmq/current/mule-wmq-ee.xsd">
+    <munit:config name="munit" doc:name="MUnit configuration" mock-connectors="false" mock-inbounds="false"/>
+    <spring:beans>
+        <spring:import resource="classpath:dbservice.xml"/>
+        <spring:import resource="classpath:SpaceSips.xml"/>
+        <spring:import resource="classpath:global.xml"/>
+    </spring:beans>
+    <munit:test name="dbservice-test-suite-getMemberByIDTest" description="Test">
+        <mock:when messageProcessor=".*:.*" doc:name="Mock">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabaseMembers']"/>
+            </mock:with-attributes>
+            <mock:then-return payload="#[[ ['rankmember':10.1, 'idship':2, 'idmember':6, 'namemember':'Montgomery Scott'] ]]" mimeType="*/*"/>
+        </mock:when>
+        <set-variable variableName="idShip" value="3" doc:name="Var idShip"/>
+        <set-variable variableName="idMember" value="6" doc:name="Var idMember"/>
+        <flow-ref name="getMemberByID" doc:name="getMemberByID"/>
+        <dw:transform-message doc:name="Transform Message" metadata:id="2ccb4752-f540-48dd-a94f-3bc75d8587bf">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload map ((payload01 , indexOfPayload01) -> {
+	idMember: payload01.idMember as :string,
+	idShip: payload01.idShip as :string,
+	nameMember: payload01.nameMember,
+	rankMember: payload01.rankMember
+} as :object {
+	class : "com.ms3.bootcamp.members.Member"
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <munit:assert-on-equals expectedValue="#[java.lang.String.valueOf(payload[0].idMember)]" actualValue="#[flowVars.idMember]" doc:name="Assert Equals" message="Expected #[flowVars.idMember] got #[payload[0].idMember]"/>
+        <logger message="OK: Expected #[flowVars.idMember] got #[payload[0].idMember]" level="INFO" doc:name="Logger"/>
+    </munit:test>
+    <munit:test name="dbservice-test-suite-getAllShipsTest" description="Test" >
+        <mock:when messageProcessor=".*:.*" doc:name="MockShipDBQuery">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabaseShips']"/>
+            </mock:with-attributes>
+            <mock:then-return payload="#[[ ['idShip':3, 'nameShip':'Kakashka', 'crewSize':6, 'speed':'10.1'] ]]"/>
+        </mock:when>
+        <mock:when messageProcessor=".*:.*" doc:name="MockMemberDBQuery">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabaseMembers']"/>
+            </mock:with-attributes>
+            <mock:then-return payload="#[[ ['rankmember':10.1, 'idship':3, 'idmember':6, 'namemember':'Montgomery Scott'] ]]"/>
+        </mock:when>
+        <flow-ref name="getAllShips" doc:name="getAllShips"/>
+        <dw:transform-message doc:name="Copy_of_Copy_of_Transform Message" metadata:id="157f731b-0a02-4367-8f56-9cb937d1af6c">
+            <dw:input-variable mimeType="application/json" variableName="ship"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload map ((ship, index) -> {
+	idShip: ship.idShip,
+	nameShip: ship.nameShip,
+	crewSize: ship.crewSize,
+	speed: ship.speed,
+	members: ship.members map ((member , indexOfMember) -> {
+		idMember: member.idMember,
+		nameMember: member.nameMember,
+		rankMember: member.rankMember,
+		idShip: member.idShip
+	})
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <munit:assert-on-equals message="Expected 3 got #[payload[0].idShip]" expectedValue="3" actualValue="#[java.lang.String.valueOf(payload[0].idShip)]" doc:name="Copy_of_Assert Equals"/>
+        <logger message="xxxxxxxxxxx:   #[payload]" level="INFO" doc:name="Logger"/>
+    </munit:test>
+    <munit:test name="dbservice-test-suite-getShipByIDTest" description="Test" >
+        <mock:when messageProcessor=".*:.*" doc:name="MockShipDBQuery">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabaseShips']"/>
+            </mock:with-attributes>
+            <mock:then-return payload="#[[ ['idShip':3, 'nameShip':'Kakashka', 'crewSize':6, 'speed':'10.1'] ]]"/>
+        </mock:when>
+        <mock:when messageProcessor=".*:.*" doc:name="MockMemberDBQuery">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabaseMembers']"/>
+            </mock:with-attributes>
+            <mock:then-return payload="#[[ ['rankmember':10.1, 'idship':3, 'idmember':6, 'namemember':'Montgomery Scott'] ]]"/>
+        </mock:when>
+        <set-variable variableName="idShip" value="3" doc:name="Var idShip"/>
+        <flow-ref name="getShipByID" doc:name="getShipByID"/>
+        <dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="157f731b-0a02-4367-8f56-9cb937d1af6c">
+            <dw:input-variable mimeType="application/json" variableName="ship"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+payload map ((ship, index) -> {
+	idShip: ship.idShip,
+	nameShip: ship.nameShip,
+	crewSize: ship.crewSize,
+	speed: ship.speed,
+	members: ship.members map ((member , indexOfMember) -> {
+		idMember: member.idMember,
+		nameMember: member.nameMember,
+		rankMember: member.rankMember,
+		idShip: member.idShip
+	})
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <munit:assert-on-equals message="Expected #[flowVars.idShip] got #[payload.idShip]" expectedValue="#[flowVars.idShip]" actualValue="#[payload.idShip]" doc:name="Assert Equals"/>
+        <logger message="xxxxxxx: #[payload.idShip]" level="INFO" doc:name="Logger"/>
+    </munit:test>
+    <munit:test name="dbservice-test-suite-putShipTest" description="Test" >
+        <mock:when messageProcessor=".*:.*" doc:name="Mock">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabasePutShip']"/>
+            </mock:with-attributes>
+        </mock:when>
+        <dw:transform-message doc:name="Transform Message" metadata:id="d37ab9a0-2c9c-478e-b95f-6c76d7a4f9ba">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	crewSize: 9,
+	nameShip: 'Kakashka',
+	speed: 9.9
+} as :object {
+	class : "com.ms3.bootcamp.ships.Ship"
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <flow-ref name="putShip" doc:name="putShip"/>
+        <munit:assert-on-equals message="\n Expected 0 got #[String.valueOf(payload.idShip)]" expectedValue="0" actualValue="#[String.valueOf(payload.idShip)]" doc:name="Assert Equals"/>
+        <logger message="'\n'" level="INFO" doc:name="Logger"/>
+    </munit:test>
+    <munit:test name="dbservice-test-suite-putMemberTest" description="Test" >
+        <mock:when messageProcessor=".*:.*" doc:name="Mock">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabasePutMemeber']"/>
+            </mock:with-attributes>
+        </mock:when>
+        <dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="d37ab9a0-2c9c-478e-b95f-6c76d7a4f9ba">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	nameMember: 'Alex Cap',
+	rankMember: 10,
+	idShip: 9
+}
+]]></dw:set-payload>
+        </dw:transform-message>
+        <flow-ref name="putMember" doc:name="putMember"/>
+        <munit:assert-on-equals message="\n Expected #[java.lang.Integer.parseInt(&quot;0&quot;)] got #[payload.idMember]" expectedValue="null" actualValue="#[String.valueOf(payload.idMember)]" doc:name="Assert Equals"/>
+        <logger level="INFO" doc:name="Logger"/>
+    </munit:test>
+    <munit:test name="dbservice-test-suite-postShipTest" description="Test" >
+        <mock:when messageProcessor=".*:.*" doc:name="Mock">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabasePostShip']"/>
+            </mock:with-attributes>
+        </mock:when>
+        <dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="d37ab9a0-2c9c-478e-b95f-6c76d7a4f9ba">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	idShip: 0,
+	crewSize: 9,
+	nameShip: 'Kakashka',
+	speed: 9.9
+} as :object {
+	class : "com.ms3.bootcamp.ships.Ship"
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <flow-ref name="postShip" doc:name="postShip"/>
+        <munit:assert-on-equals message="\n Expected 0 got #[String.valueOf(payload.idShip)]" expectedValue="0" actualValue="#[String.valueOf(payload.idShip)]" doc:name="Assert Equals"/>
+        <logger message="'\n'" level="INFO" doc:name="Logger"/>
+    </munit:test>
+    <munit:test name="dbservice-test-suite-postMemberTest" description="Test" >
+        <mock:when messageProcessor=".*:.*" doc:name="Mock">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabasePostMember']"/>
+            </mock:with-attributes>
+        </mock:when>
+        <dw:transform-message doc:name="Copy_of_Copy_of_Transform Message" metadata:id="d37ab9a0-2c9c-478e-b95f-6c76d7a4f9ba">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	nameMember: 'Alex Cap',
+	rankMember: 10,
+	idShip: 9
+}
+]]></dw:set-payload>
+        </dw:transform-message>
+        <flow-ref name="postMember" doc:name="postMember"/>
+        <munit:assert-on-equals message="\n Expected #[java.lang.Integer.parseInt(&quot;0&quot;)] got #[payload.idMember]" expectedValue="null" actualValue="#[String.valueOf(payload.idMember)]" doc:name="Assert Equals"/>
+        <logger level="INFO" doc:name="Logger"/>
+    </munit:test>
+    <munit:test name="dbservice-test-suite-deleteShipTest" description="Test" >
+        <mock:when messageProcessor=".*:.*" doc:name="Mock">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabaseDeleteShip']"/>
+            </mock:with-attributes>
+        </mock:when>
+        <set-variable variableName="idShip" value="2" doc:name="Variable"/>
+        <flow-ref name="deleteShip" doc:name="deleteShip"/>
+        <munit:assert-on-equals expectedValue="2" actualValue="#[flowVars.idShip]" doc:name="Assert Equals"/>
+        <logger level="INFO" doc:name="Logger"/>
+    </munit:test>
+    <munit:test name="dbservice-test-suite-deleteMemberTest" description="Test" >
+        <mock:when messageProcessor=".*:.*" doc:name="Mock">
+            <mock:with-attributes>
+                <mock:with-attribute name="doc:name" whereValue="#['DatabaseDeleteMember']"/>
+            </mock:with-attributes>
+        </mock:when>
+        <set-variable variableName="idMember" value="1" doc:name="Variable"/>
+        <flow-ref name="deleteMember" doc:name="deleteMember"/>
+        <munit:assert-on-equals expectedValue="1" actualValue="#[flowVars.idMember]" doc:name="Assert Equals"/>
+        <logger level="INFO" doc:name="Logger"/>
+    </munit:test>
+</mule>

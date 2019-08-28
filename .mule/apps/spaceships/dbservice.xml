@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+    <flow name="getAllShips" initialState="started">
+        <scatter-gather doc:name="Scatter-Gather">
+            <processor-chain>
+                <db:select config-ref="MySQL_Configuration" doc:name="DatabaseShips">
+                    <db:parameterized-query><![CDATA[SELECT * FROM ships]]></db:parameterized-query>
+                </db:select>
+                <dw:transform-message doc:name="Transform Message" metadata:id="b3199c32-f922-4356-a9d5-b22c84956924">
+                    <dw:input-payload mimeType="application/java"/>
+                    <dw:set-variable variableName="shipsList"><![CDATA[%dw 1.0
+%output application/json
+---
+payload map ((payload01 , indexOfPayload01) -> {
+	crewSize: payload01.crewSize,
+	idShip: payload01.idShip,
+	nameShip: payload01.nameShip,
+	speed: payload01.speed
+} as :object {
+	class : "com.ms3.bootcamp.ships.Ship"
+})]]></dw:set-variable>
+                </dw:transform-message>
+                <logger level="INFO" doc:name="Logger"/>
+            </processor-chain>
+            <processor-chain>
+                <db:select config-ref="MySQL_Configuration" doc:name="DatabaseMembers">
+                    <db:parameterized-query><![CDATA[SELECT * FROM crewMembers]]></db:parameterized-query>
+                </db:select>
+                <dw:transform-message doc:name="Transform Message" metadata:id="6a02caa2-3331-4098-93cb-1eef8de8865b">
+                    <dw:set-variable variableName="membersList"><![CDATA[%dw 1.0
+%output application/json
+---
+payload map ((payload01 , indexOfPayload01) -> {
+	idMember: payload01.idmember,
+	nameMember: payload01.namemember,
+	rank: payload01.rankmember,
+	idShip: payload01.idship
+})]]></dw:set-variable>
+                </dw:transform-message>
+                <logger level="INFO" doc:name="Logger"/>
+            </processor-chain>
+        </scatter-gather>
+        <dw:transform-message doc:name="Transform Message" metadata:id="9b4e3779-0c54-43b8-a62b-9641fa5ab566">
+            <dw:input-payload/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+payload[0] map ((ship , indexOfShips) -> {
+	idShip: ship.idShip,
+	nameShip: ship.nameShip,
+	crewSize: ship.crewSize,
+	speed: ship.speed,
+	
+	
+	members: 
+	 payload[1] filter ($.idship == ship.idShip)
+	 map ((member , indexOfmember) -> {
+		idMember: member.idmember,
+		nameMember: member.namemember,
+		rank: member.rankmember,
+		idShip: member.idship
+	} 
+//	 when shipsList.idShip==payload01.idship otherwise ''
+	) 	
+	})]]></dw:set-payload>
+        </dw:transform-message>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="getShipByID">
+        <scatter-gather doc:name="Scatter-Gather">
+            <db:select config-ref="MySQL_Configuration" doc:name="DatabaseShips">
+                <db:parameterized-query><![CDATA[SELECT * FROM ships WHERE idShip = #[flowVars.idShip]]]></db:parameterized-query>
+            </db:select>
+            <flow-ref name="getMemberByID" doc:name="getMemberByID"/>
+        </scatter-gather>
+        <dw:transform-message doc:name="Transform Message" metadata:id="157f731b-0a02-4367-8f56-9cb937d1af6c">
+            <dw:input-variable mimeType="application/json" variableName="ship"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+payload[0] map ((ship, index) -> {
+	idShip: ship.idShip,
+	nameShip: ship.nameShip,
+	crewSize: ship.crewSize,
+	speed: ship.speed,
+	members: payload[1] map ((payload01 , indexOfPayload01) -> {
+		idMember: payload01.idMember,
+		nameMember: payload01.nameMember,
+		rankMember: payload01.rankMember,
+		idShip: payload01.idShip
+	})
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="getMemberByID">
+        <db:select config-ref="MySQL_Configuration" doc:name="DatabaseMembers">
+            <db:parameterized-query><![CDATA[SELECT * FROM crewmembers WHERE idShip = #[flowVars.idShip]]]></db:parameterized-query>
+        </db:select>
+        <logger message="xxxxxxxxxxxx: #[message.payloadAs(java.lang.String)]" level="INFO" doc:name="Logger"/>
+        <dw:transform-message doc:name="Transform Message" metadata:id="b132f7ca-5950-4a6a-9e58-42642f68159f">
+            <dw:input-payload doc:sample="sample_data/list_map.dwl"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+payload map ((payload01 , indexOfPayload01) -> {
+	idMember: payload01.idmember,
+	nameMember: payload01.namemember,
+	rankMember: payload01.rankmember,
+	idShip: payload01.idship
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="putShip">
+        <dw:transform-message doc:name="Transform Message" metadata:id="1e46e9be-6b65-498c-abe5-4a85b6f27fb8">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	crewSize: payload.crewSize,
+	nameShip: payload.nameShip,
+	speed: payload.speed
+} as :object {
+	class : "com.ms3.bootcamp.ships.Ship"
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <db:update config-ref="MySQL_Configuration" doc:name="DatabasePutShip">
+            <db:parameterized-query><![CDATA[UPDATE ships SET nameship=#[message.payload.nameShip],crewsize=#[payload.crewSize],speed=#[payload.speed] WHERE idShip = #[flowVars.idShip]]]></db:parameterized-query>
+        </db:update>
+        <logger message="#[message.inboundAttachments.speed]" level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="putMember">
+        <dw:transform-message doc:name="Transform Message" metadata:id="6095cc2d-053d-43fe-b9de-8cd04038c74e">
+            <dw:input-payload mimeType="application/json"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+[
+{
+	idMember: payload.idMember,
+	idShip: payload.idShip,
+	nameMember: payload.nameMember,
+	rankMember: payload.rankMember
+} as :object {
+	class : "com.ms3.bootcamp.members.Member"
+}]]]></dw:set-payload>
+        </dw:transform-message>
+        <db:update config-ref="MySQL_Configuration" doc:name="DatabasePutMemeber">
+            <db:parameterized-query><![CDATA[UPDATE crewmembers SET namemember=#[message.payload.nameMember],rankmember=#[payload.rankMember],idship=#[message.payload.idShip] WHERE idmember = #[flowVars.idMember]]]></db:parameterized-query>
+        </db:update>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="postShip">
+        <dw:transform-message doc:name="Transform Message" metadata:id="e2245f54-d617-4795-b2b8-7942a635e5ef">
+            <dw:input-payload mimeType="application/json"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	crewSize: payload.crewSize,
+	idShip: payload.idShip,
+//	memberList: payload.members map ((member , indexOfMember) -> {
+//		idMember: member.idMember,
+//		idShip: member.idShip,
+//		nameMember: member.nameMember
+//	}),
+	nameShip: payload.nameShip,
+	speed: payload.speed
+} as :object {
+	class : "com.ms3.bootcamp.ships.Ship"
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <db:insert config-ref="MySQL_Configuration" doc:name="DatabasePostShip">
+            <db:parameterized-query><![CDATA[INSERT INTO ships(nameship, crewsize, speed) value ( #[payload.nameShip] , #[payload.crewSize], #[payload.speed])]]></db:parameterized-query>
+        </db:insert>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="postMember">
+        <dw:transform-message doc:name="Transform Message" metadata:id="e2245f54-d617-4795-b2b8-7942a635e5ef">
+            <dw:input-payload mimeType="application/json"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	idShip: payload.idShip,
+	nameMember: payload.nameMember,
+	rankMember: payload.rankMember
+} as :object {
+	class : "com.ms3.bootcamp.members.Member"
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <db:insert config-ref="MySQL_Configuration" doc:name="DatabasePostMember">
+            <db:parameterized-query><![CDATA[INSERT INTO crewmembers(namemember, rankmember, idship) value ( #[payload.nameMember] , #[payload.rankMember], #[payload.idShip])]]></db:parameterized-query>
+        </db:insert>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="deleteShip">
+        <db:delete config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[DELETE FROM ships WHERE idShip = #[flowVars.idShip]]]></db:parameterized-query>
+        </db:delete>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="deleteMember">
+        <db:delete config-ref="MySQL_Configuration" target="#[flowVars.dbreport]" doc:name="Database">
+            <db:parameterized-query><![CDATA[DELETE FROM crewmembers WHERE idMember = #[flowVars.idMember]]]></db:parameterized-query>
+        </db:delete>
+        <logger level="INFO" doc:name="Logger"/>
+    </flow>
+</mule>

@@ -9,15 +9,8 @@
     },
     "outputMessageMetadata": {
         "messagePayload": {
-            "model": {
-                "connectorName": "#_custom_mule_metadata_type_#",
-                "typeId": "ship_json"
-            },
-            "isArray": false,
-            "dataType": "LIST",
-            "metaDataModelPropertiesManager": {
-                "properties": []
-            }
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "ShipJava"
         }
     },
     "id": "157f731b-0a02-4367-8f56-9cb937d1af6c",
